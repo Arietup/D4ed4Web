@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acerca de | Castillo de Neocities</title>
+    <link rel="stylesheet" href="css/acerca-style.css?v=2">
+</head>
+<body class="bg-acerca">
+    <div class="acerca-layout" style="position:relative;">
+        <!-- Nav principal a la izquierda -->
+        <nav class="card nav-card">
+            <h2>Menú</h2>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="acerca.html">Acerca de</a></li>
+                <li><a href="musica.html">Música</a></li>
+                <li><a href="links.html">Links</a></li>
+            </ul>
+            <!-- Segundo nav debajo del principal -->
+            <div class="card temas-card">
+                <h2>Temas</h2>
+                <ul class="temas-list">
+                    <li><a href="#" id="tema-bienvenido" class="active-tema">Bienvenido</a></li>
+                    <li><a href="#" id="tema-yo">Yo?</a></li>
+                    <li><a href="#" id="tema-juegos">Juegos</a></li>
+                    <li><a href="#" id="tema-arte">Arte</a></li>
+                    <li><a href="#" id="tema-sinsentido">Sin sentido</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Ventana principal amplia a la derecha -->
+        <main class="card main-acerca-card">
+            <header>
+                <h1 id="main-title">Bienvenido/a al Castillo</h1>
+            </header>
+            <section id="main-content">
+                <p>
+                    Aquí encontrarás una introducción y todo lo que podrás explorar en esta página: música, juegos, arte, reflexiones y más. 
+                    Este espacio está pensado para compartir intereses, ideas y un poco de "sin sentido" también. 
+                    <br><br>
+                    ¡Explora los temas desde el menú de la izquierda y disfruta tu visita!
+                </p>
+            </section>
+        </main>
+    </div>
+    <!-- Ojo decorativo solo con temblor al acercar el mouse -->
+    <div class="ojo-decorativo" id="ojo-decorativo">
+        <img class="ojo-decorativo-img" src="img/eye.gif" alt="Ojo decorativo" />
+    </div>
+    <script>
+    // Contenidos para cada tema
+    const temas = {
+        bienvenido: {
+            title: "Bienvenido/a al Castillo",
+            html: `<p>
+                Aquí encontrarás una introducción y todo lo que podrás explorar en esta página: música, juegos, arte, reflexiones y más. 
+                Este espacio está pensado para compartir intereses, ideas y un poco de "sin sentido" también. 
+                <br><br>
+                ¡Explora los temas desde el menú de la izquierda y disfruta tu visita!
+            </p>`
+        },
+        yo: {
+            title: "¿Yo?",
+            html: `<p>
+                Este proyecto es pequeño, quizás no reciba toda mi atención. Pero existe, y eso basta. 
+                Acá es donde intento materializar una idea, darle forma a una idea que tengo presente.
+
+                <br><br>
+
+                Al morir, solemos pensar que todo se desvanece y nos marchamos hacia el olvido. 
+                ¿Alguna vez te has preguntado qué queda de ti cuando ya no estás? 
+                Algunos dirán que son los hijos, los logros, los bienes, los recuerdos. Pero, ¿qué 
+                hay de aquello que realmente eres?
+
+                <br><br>
+
+                Me refiero a lo invisible: tus pensamientos, tus ideas, tus sentimientos, tus gustos, 
+                tus miedos, tus sueños, tus deseos, tus metas. 
+                ¿Todo eso desaparece sin dejar rastro?
+
+                <br><br>
+
+                Creo que hay formas de dejar una huella, aunque sea pequeña. Para mí, este espacio es una de 
+                ellas. 
+                Aquí, entre líneas y sonidos, dejo fragmentos de lo que soy. Sin buscar nada en especifico.
+
+                <br><br>
+ 
+                Si llegaste hasta aquí, quizás encuentres algo que resuene contigo. O quizás no. 
+                Pero al menos, por un momento, existimos juntos en este mismo pensamiento.
+
+
+            </p>`
+        },
+        juegos: {
+            title: "Juegos",
+            html: `<p>
+                Los juegos son una puerta a otros mundos. Desde clásicos retro hasta nuevas experiencias indie, aquí encontrarás recomendaciones, recuerdos y curiosidades sobre el arte de jugar.<br><br>
+                ¿Cuál es tu juego favorito y por qué?
+            </p>`
+        },
+        arte: {
+            title: "Arte",
+            html: `<p>
+                El arte es la expresión más pura del ser. Pintura, fotografía, escritura y más: este espacio está dedicado a la creatividad y la inspiración visual.<br><br>
+                Comparte tus obras o déjate inspirar por las que aquí aparecen.
+            </p>`
+        },
+        sinsentido: {
+            title: "Sin sentido",
+            html: `<p>
+                A veces, lo mejor es dejarse llevar por el absurdo. Aquí caben pensamientos aleatorios, frases sin lógica y todo aquello que no encaja en ningún otro lado.<br><br>
+                Porque el castillo también tiene habitaciones secretas.
+            </p>`
+        }
+    };
+
+    // Asignar eventos a los enlaces de temas
+    document.addEventListener("DOMContentLoaded", function() {
+        const temaIds = [
+            "bienvenido",
+            "yo",
+            "juegos",
+            "arte",
+            "sinsentido"
+        ];
+        temaIds.forEach(function(tema) {
+            document.getElementById("tema-" + tema).addEventListener("click", function(e) {
+                e.preventDefault();
+                setTema(tema);
+            });
+        });
+    });
+
+    function setTema(tema) {
+        document.getElementById("main-title").textContent = temas[tema].title;
+        document.getElementById("main-content").innerHTML = temas[tema].html;
+        // Quitar clase activa de todos los temas
+        document.querySelectorAll('.temas-list a').forEach(function(a) {
+            a.classList.remove('active-tema');
+        });
+        // Agregar clase activa al tema seleccionado
+        document.getElementById("tema-" + tema).classList.add('active-tema');
+    }
+
+    // Efecto sutil y misterioso: el ojo tiembla y brilla si el mouse está cerca
+    (function() {
+        const ojo = document.getElementById("ojo-decorativo");
+        const ojoImg = document.getElementById("ojo-decorativo-img");
+        if (!ojo || !ojoImg) return;
+
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener("mousemove", function(e) {
+            mouseX = e.clientX;
+            mouseY = e.clientY;
+        });
+
+        function animateOjo() {
+            const ojoRect = ojo.getBoundingClientRect();
+            const centerX = ojoRect.left + ojoRect.width / 2;
+            const centerY = ojoRect.top + ojoRect.height / 2;
+            const dx = mouseX - centerX;
+            const dy = mouseY - centerY;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+
+            if (dist < 120) {
+                const maxMove = 8;
+                const angle = Math.atan2(dy, dx);
+                const moveX = Math.cos(angle) * Math.min(dist, maxMove);
+                const moveY = Math.sin(angle) * Math.min(dist, maxMove) * 0.5;
+                ojoImg.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.08)`;
+                ojoImg.style.filter = "drop-shadow(0 0 24px #fff) drop-shadow(0 0 16px #2a1a7a) brightness(1.13)";
+                ojo.style.filter = "drop-shadow(0 0 36px #7a1a1a)";
+            } else if (dist < 90) {
+                ojoImg.style.transform = "scale(1.06)";
+                ojoImg.style.filter = "drop-shadow(0 0 18px #7a1a1a) brightness(1.08)";
+                ojo.style.filter = "drop-shadow(0 0 24px #7a1a1a)";
+            } else {
+                ojoImg.style.transform = "scale(1)";
+                ojoImg.style.filter = "drop-shadow(0 0 12px #000a)";
+                ojo.style.filter = "drop-shadow(0 0 18px #7a1a1a88)";
+            }
+            requestAnimationFrame(animateOjo);
+        }
+        animateOjo();
+    })();
+
+    // Efecto sutil: el ojo solo se mueve y tiembla levemente si el mouse está cerca, menos brillo
+    (function() {
+        const ojo = document.getElementById("ojo-decorativo");
+        const ojoImg = document.getElementById("ojo-decorativo-img");
+        if (!ojo || !ojoImg) return;
+
+        document.addEventListener("mousemove", function(e) {
+            const ojoRect = ojo.getBoundingClientRect();
+            const centerX = ojoRect.left + ojoRect.width / 2;
+            const centerY = ojoRect.top + ojoRect.height / 2;
+            const dx = e.clientX - centerX;
+            const dy = e.clientY - centerY;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+
+            if (dist < 120) {
+                const maxMove = 6;
+                const angle = Math.atan2(dy, dx);
+                const moveX = Math.cos(angle) * Math.min(dist, maxMove);
+                const moveY = Math.sin(angle) * Math.min(dist, maxMove) * 0.5;
+                ojoImg.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.04)`;
+                ojoImg.style.filter = "drop-shadow(0 0 12px #2a1a3a) drop-shadow(0 0 6px #000a)";
+                ojo.style.opacity = "0.85";
+                ojo.classList.add("temblor");
+            } else {
+                ojoImg.style.transform = "translate(0,0) scale(1)";
+                ojoImg.style.filter = "drop-shadow(0 0 6px #1a1a3a) drop-shadow(0 0 4px #000a)";
+                ojo.style.opacity = "0.65";
+                ojo.classList.remove("temblor");
+            }
+        });
+    })();
+
+    // Efecto: el ojo muestra efectos y tiembla si el mouse está cerca o encima (hover)
+    (function() {
+        const ojo = document.getElementById("ojo-decorativo");
+        const ojoImg = document.getElementById("ojo-decorativo-img");
+        if (!ojo || !ojoImg) return;
+
+        let mouseSobreOjo = false;
+
+        ojo.addEventListener("mouseenter", () => { mouseSobreOjo = true; });
+        ojo.addEventListener("mouseleave", () => { mouseSobreOjo = false; });
+
+        document.addEventListener("mousemove", function(e) {
+            const ojoRect = ojo.getBoundingClientRect();
+            const centerX = ojoRect.left + ojoRect.width / 2;
+            const centerY = ojoRect.top + ojoRect.height / 2;
+            const dx = e.clientX - centerX;
+            const dy = e.clientY - centerY;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+
+            // Si el mouse está cerca o encima, activa efectos y temblor
+            if (dist < 90 || mouseSobreOjo) {
+                const maxMove = 5;
+                const angle = Math.atan2(dy, dx);
+                const moveX = Math.cos(angle) * Math.min(dist, maxMove);
+                const moveY = Math.sin(angle) * Math.min(dist, maxMove) * 0.5;
+                ojoImg.style.transform = `translate(${moveX}px, ${moveY}px) scale(1.03)`;
+                ojo.classList.add("activo");
+                ojo.classList.add("temblor");
+            } else {
+                ojoImg.style.transform = "translate(0,0) scale(1)";
+                ojo.classList.remove("activo");
+                ojo.classList.remove("temblor");
+            }
+        });
+    })();
+
+    // Efecto: el ojo solo tiembla al acercar el mouse
+    (function() {
+        const ojo = document.getElementById("ojo-decorativo");
+        if (!ojo) return;
+
+        document.addEventListener("mousemove", function(e) {
+            const rect = ojo.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+            const dx = e.clientX - centerX;
+            const dy = e.clientY - centerY;
+            const dist = Math.sqrt(dx*dx + dy*dy);
+
+            if (dist < 90) {
+                ojo.classList.add("temblor");
+            } else {
+                ojo.classList.remove("temblor");
+            }
+        });
+    })();
+    </script>
+</body>
+</html>

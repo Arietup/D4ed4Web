@@ -1,0 +1,401 @@
+/* --- Estilos generales y para MUSICA --- */
+body.bg-musica {
+    background: url('../img/backround/bg_musica.gif') no-repeat center center fixed;
+    background-size: cover;
+}
+body {
+    background: #000;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+}
+.card {
+    border-radius: 0;
+    box-sizing: border-box;
+}
+.btn-link {
+    display: inline-block;
+    color: #fff;
+    border: 1px solid #fff;
+    background: transparent;
+    padding: 0.3em 0.8em;
+    margin-bottom: 0.2em;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    transition: background 0.2s, color 0.2s;
+    border-radius: 2px;
+    text-align: center;
+}
+.btn-link:hover {
+    background: #7a1a1a;
+    color: #fff;
+    border-color: #7a1a1a;
+}
+/* --- MÚSICA --- */
+.music-layout {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+    width: 100vw;
+    padding-left: 32px;
+    padding-right: 32px;
+    box-sizing: border-box;
+}
+.music-layout .nav-card {
+    margin-left: 0;
+    margin-right: 24px;
+    margin-top: 32px;
+    margin-bottom: 40px;
+    min-height: 400px;
+    background: #000;
+    border: 2px solid #fff;
+    border-right: 4px double #7a1a1a;
+    width: 180px;
+    min-width: 140px;
+    padding: 1.5rem 1rem 1.5rem 1rem;
+    font-size: 0.98rem;
+}
+.music-layout .nav-card h2 {
+    color: #fff;
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 0.3rem;
+    letter-spacing: 1px;
+    font-weight: normal;
+}
+.music-layout .nav-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.music-layout .nav-card li {
+    margin-bottom: 1.1rem;
+}
+.music-layout .nav-card a {
+    color: #fff;
+    text-decoration: underline;
+    font-size: 1rem;
+    transition: color 0.2s, background 0.2s, border-bottom 0.2s;
+    border-bottom: 1px dotted #7a1a1a;
+    padding: 2px 2px;
+    border-radius: 2px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+.music-layout .nav-card a:hover {
+    color: #7a1a1a;
+    background: #fff1;
+    border-bottom: 1px solid #fff;
+}
+.music-columns {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 32px;
+}
+.playlist-card, .songs-card {
+    background: rgba(0,0,0,0.92);
+    border: 2px double #fff;
+    padding: 2rem 2rem 1.5rem 2rem;
+    box-sizing: border-box;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    max-height: 650px;
+    overflow-y: auto;
+}
+.playlist-card::before,
+.songs-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    background: repeating-linear-gradient(
+        135deg,
+        transparent,
+        transparent 12px,
+        rgba(255,255,255,0.03) 12px,
+        rgba(255,255,255,0.03) 16px
+    );
+    z-index: 0;
+}
+.playlist-card header h1,
+.songs-card header h1 {
+    font-size: 1.2rem;
+    color: #fff;
+    margin: 0 0 1.2rem 0;
+    letter-spacing: 1.5px;
+    border-bottom: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+    display: inline-block;
+    padding-bottom: 0.3rem;
+}
+.playlist-card header h1::after,
+.songs-card header h1::after {
+    content: "";
+    display: block;
+    width: 80%;
+    height: 2px;
+    margin-top: 4px;
+    background: linear-gradient(90deg, #7a1a1a 60%, transparent 100%);
+}
+.playlist-list.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.2em;
+    width: 100%;
+}
+.playlist-item {
+    background: rgba(20,20,20,0.92);
+    border: 1.5px dashed #fff;
+    border-radius: 8px;
+    padding: 1.2em 1em 1em 1em;
+    margin-bottom: 1.5em;
+    position: relative;
+    box-shadow: 0 0 0 2px #7a1a1a44 inset;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.playlist-item:hover {
+    border-color: #7a1a1a;
+    box-shadow: 0 0 0 2px #7a1a1a99 inset;
+}
+.playlist-header {
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 0.5em;
+}
+.playlist-icon {
+    color: #7a1a1a;
+    font-size: 1.3em;
+    filter: blur(0.2px);
+}
+.playlist-title {
+    color: #fff;
+    font-size: 1.05em;
+    letter-spacing: 1px;
+    font-family: 'Courier New', Courier, monospace;
+    opacity: 0.95;
+}
+.playlist-frame-wrap {
+    background: #111;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 0.3em;
+    margin-bottom: 0.5em;
+    box-shadow: 0 0 8px #000a inset;
+}
+.playlist-frame-wrap iframe {
+    display: block;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    filter: grayscale(0.15) contrast(1.1);
+}
+.playlist-desc {
+    color: #fff;
+    font-size: 0.95em;
+    opacity: 0.7;
+    font-style: italic;
+    letter-spacing: 1px;
+    display: block;
+    margin-top: 0.2em;
+}
+/* --- CANCIONES EN FILAS DE 3 --- */
+.grid-5 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+    width: 100%;
+    padding-bottom: 0.5em;
+}
+.grid-5 li {
+    margin-bottom: 0;
+    min-width: 0;
+    word-break: break-word;
+    background: rgba(20,20,20,0.92);
+    border: 1.5px dashed #fff;
+    border-radius: 10px;
+    padding: 1.2em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-height: 220px;
+}
+.grid-5 b {
+    font-size: 1.08em;
+    text-align: center;
+    margin-bottom: 0.7em;
+    display: block;
+    width: 100%;
+    word-break: break-word;
+    letter-spacing: 1px;
+}
+.grid-5 iframe {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    height: 100px;
+    border-radius: 6px;
+    border: 2px solid #fff;
+    background: #111;
+    box-sizing: border-box;
+    margin-bottom: 0.5em;
+}
+@media (max-width: 1100px) {
+    .grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 700px) {
+    .grid-5 {
+        grid-template-columns: 1fr;
+    }
+}
+/* Canciones en filas de 2, bien centradas y amigables */
+.music-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5em;
+    width: 100%;
+    padding-bottom: 0.5em;
+    justify-items: center;
+}
+.music-grid li {
+    background: rgba(20,20,20,0.92);
+    border: 1.5px dashed #fff;
+    border-radius: 14px;
+    padding: 2em 1.5em 1.5em 1.5em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    min-width: 0;
+    max-width: 340px;
+    width: 100%;
+    margin: 0 auto;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+.music-grid li:hover {
+    border-color: #7a1a1a;
+    box-shadow: 0 0 0 2px #7a1a1a99 inset;
+}
+.music-frame-wrap {
+    width: 100%;
+    max-width: 240px;
+    aspect-ratio: 1/1;
+    background: #111;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.music-frame-wrap iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 8px;
+    background: #111;
+    display: block;
+}
+.music-grid b {
+    font-size: 1.12em;
+    text-align: center;
+    margin-bottom: 0.2em;
+    display: block;
+    width: 100%;
+    word-break: break-word;
+    letter-spacing: 1px;
+    color: #fff;
+    margin-top: 0.5em;
+}
+@media (max-width: 900px) {
+    .music-layout {
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+    .music-grid li {
+        max-width: 98vw;
+    }
+}
+/* Lista minimalista de canciones recomendadas */
+.song-list-minimal {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+}
+.song-list-minimal li {
+    background: rgba(20,20,20,0.92);
+    border: 1.5px dashed #fff;
+    border-radius: 14px;
+    padding: 1.5em 1em;
+    display: flex;
+    align-items: center;
+    gap: 1.2em;
+    max-width: 380px;
+    margin: 0 auto;
+}
+.song-list-minimal img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #fff;
+    background: #111;
+}
+.song-list-minimal .song-title {
+    font-weight: bold;
+    color: #fff;
+    font-size: 1.08em;
+    display: block;
+    margin-bottom: 0.2em;
+}
+.song-list-minimal .song-track {
+    color: #fff;
+    font-size: 1em;
+    display: block;
+    margin-bottom: 0.7em;
+    opacity: 0.85;
+}
+.song-list-minimal .song-link {
+    display: inline-block;
+    color: #fff;
+    background: #7a1a1a;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    padding: 0.2em 0.8em;
+    text-decoration: none;
+    font-size: 0.98em;
+    transition: background 0.2s, color 0.2s;
+}
+.song-list-minimal .song-link:hover {
+    background: #fff;
+    color: #7a1a1a;
+}
+@media (max-width: 900px) {
+    .song-list-minimal {
+        grid-template-columns: 1fr;
+    }
+}
+
