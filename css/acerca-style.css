@@ -141,11 +141,11 @@ body {
     margin: 0;
     padding: 3rem 3.5rem 2.5rem 3.5rem;
     /* Un poco más angosta, pero no tanto */
-    max-width: 700px;
+    max-width: 660px;
     min-width: 300px;
     width: 100%;
-    min-height: 75vh;
-    max-height: 75vh;
+    min-height: 85vh;
+    max-height: 85vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -163,7 +163,7 @@ body {
     overflow-x: hidden;
     padding-right: 0.5rem;
     /* Altura máxima para que el header quede fijo arriba */
-    max-height: calc(75vh - 4.5rem); /* Ajusta según el header y padding */
+    max-height: calc(85vh - 4.5rem); /* Ajusta según el header y padding */
 }
 
 /* Scrollbar personalizada solo para el contenido desplazable */

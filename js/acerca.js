@@ -1,12 +1,19 @@
 // Contenidos para cada tema
 const temas = {
     bienvenido: {
-        title: "Bienvenido/a al Castillo",
+        title: "Bienvenido/a",
         html: `<p>
-            Aquí encontrarás una introducción y todo lo que podrás explorar en esta página: música, juegos, arte, reflexiones y más. 
-            Este espacio está pensado para compartir intereses, ideas y un poco de "sin sentido" también. 
+            El objetivo de este espacio es representar y compartir varias cosas, te invito a explorar
+            alrededor de la página. <br>
+            Mi principal objetivo es crear un espacio interactivo e interesante donde puedas
+            perderte al menos un rato explorando.
+            <br>
+            En esta página encontrarás detalles que he tratado que no estén a simple vista,
+            por lo que te invito a brindarle atención a cada rincón. Inlcuso lo no tan visible.
             <br><br>
             ¡Explora los temas desde el menú de la izquierda y disfruta tu visita!
+            <br>
+            Esta es una pequeña prueba de navegación oculta.
         </p>`
     },
     yo: {
@@ -54,6 +61,18 @@ const temas = {
             Comparte tus obras o déjate inspirar por las que aquí aparecen.
         </p>`
     },
+    flipnote: {
+        title: "Flipnote",
+        html: `<p>
+            <strong>Flipnote Studio</strong> fue una aplicación icónica para la Nintendo DSi que permitió a miles de personas crear animaciones sencillas, creativas y, muchas veces, sorprendentes. 
+            <br><br>
+            Lo que más me fascina de las animaciones Flipnote es cómo, con recursos tan limitados, la comunidad logró expresar ideas, contar historias y transmitir emociones de una forma única y nostálgica. 
+            <br><br>
+            Aquí quiero compartirte algunas de mis Flipnotes favoritas, no solo por su calidad técnica, sino por la creatividad y el sentimiento que transmiten. Si alguna vez usaste una Nintendo DS, seguro recordarás la magia de ver estas pequeñas animaciones cobrar vida en la pantalla.
+            <br><br>
+            <iframe src="https://www.sudomemo.net/watch/embed/5372C9_0EDDE7805A2D1_033" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+        </p>`
+    },
     sinsentido: {
         title: "Sin sentido",
         html: `<p>
@@ -70,6 +89,7 @@ document.addEventListener("DOMContentLoaded", function() {
         "yo",
         "juegos",
         "arte",
+        "flipnote",
         "sinsentido"
     ];
     temaIds.forEach(function(tema) {
