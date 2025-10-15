@@ -14,7 +14,7 @@ const temas = {
             ¡Explora los temas desde el menú de la izquierda y disfruta tu visita!
             <br>
         </p>
-        <img src="../img/sources/prayer.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
+        <img src="img/sources/prayer.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
         <p>
             Esta es una pequeña prueba de navegación oculta.
         </p>`
@@ -38,7 +38,7 @@ const temas = {
             tus miedos, tus sueños, tus deseos, tus metas. 
             ¿Todo eso desaparece sin dejar rastro?
 
-            <img src="../img/sources/ready4talking.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
+            <img src="img/sources/ready4talking.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
 
             <br><br>
 
