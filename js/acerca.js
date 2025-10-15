@@ -13,6 +13,9 @@ const temas = {
             <br><br>
             ¡Explora los temas desde el menú de la izquierda y disfruta tu visita!
             <br>
+        </p>
+        <img src="../img/sources/prayer.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
+        <p>
             Esta es una pequeña prueba de navegación oculta.
         </p>`
     },
@@ -34,6 +37,8 @@ const temas = {
             Me refiero a lo invisible: tus pensamientos, tus ideas, tus sentimientos, tus gustos, 
             tus miedos, tus sueños, tus deseos, tus metas. 
             ¿Todo eso desaparece sin dejar rastro?
+
+            <img src="../img/sources/ready4talking.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
 
             <br><br>
 
@@ -70,7 +75,13 @@ const temas = {
             <br><br>
             Aquí quiero compartirte algunas de mis Flipnotes favoritas, no solo por su calidad técnica, sino por la creatividad y el sentimiento que transmiten. Si alguna vez usaste una Nintendo DS, seguro recordarás la magia de ver estas pequeñas animaciones cobrar vida en la pantalla.
             <br><br>
-            <iframe src="https://www.sudomemo.net/watch/embed/5372C9_0EDDE7805A2D1_033" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+            <hr style="border:0;border-top:1.5px solid #7a1a1a;margin:2em 0 1em 0;">
+            <button id="flipnote-desplegar-btn" class="btn-link" style="margin-bottom:1em;">Desplegar</button>
+            <div id="flipnote-extra" style="display:none;">
+                <div class="flipnote-grid">
+                    <iframe src="https://www.sudomemo.net/watch/embed/5372C9_0EDDE7805A2D1_033" scrolling="no" frameborder="0" width="470" height="390"></iframe>
+                </div>
+            </div>
         </p>`
     },
     sinsentido: {
@@ -112,6 +123,23 @@ function setTema(tema) {
     });
     // Agregar clase activa al tema seleccionado
     document.getElementById("tema-" + tema).classList.add('active-tema');
+
+    // Lógica para el botón "Desplegar" en Flipnote
+    if (tema === "flipnote") {
+        const btn = document.getElementById("flipnote-desplegar-btn");
+        const extra = document.getElementById("flipnote-extra");
+        if (btn && extra) {
+            btn.addEventListener("click", function() {
+                if (extra.style.display === "none") {
+                    extra.style.display = "block";
+                    btn.textContent = "Ocultar";
+                } else {
+                    extra.style.display = "none";
+                    btn.textContent = "Desplegar";
+                }
+            });
+        }
+    }
 }
 
 // Efecto del ojo decorativo: solo vibración/temblor
