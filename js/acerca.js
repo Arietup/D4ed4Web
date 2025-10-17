@@ -62,9 +62,34 @@ const temas = {
     arte: {
         title: "Arte",
         html: `<p>
-            El arte es la expresión más pura del ser. Pintura, fotografía, escritura y más: este espacio está dedicado a la creatividad y la inspiración visual.<br><br>
-            Comparte tus obras o déjate inspirar por las que aquí aparecen.
-        </p>`
+            Dentro de este apartado me gustaría profundizar princpilamente en el arte visual, como la pintura y la fotografía.
+            Puedo comprender que existen muchisimas formas de expresión, incluyendo las menos convencionales como el arte digital, el pixel art, el arte generativo, entre otros, pero
+            Al menos en este espacio trataré de enfocarme en las formas más tradicionales y alguna otra que no lo sea tanto.
+            <br><br>
+            Entrando en detalle, Este apartado se podría llegar a tornar un tanto extenso, sin embargo, trataré de llevarlo de la manera más ordenada, amena y disfrutable posible, presentandote
+            lo que personalmente más capta mi antención y más interesante me parece.
+            <br><br>
+            Espero disfrutes de los distintos subtemas que se encuentran aquí y puedas encontrar al menos algo que te llame mínimamente la atención.
+            <br>
+            No agregaré expresiones de arte como el cine, libros o música, ya que considero estas deben de tener un espacio exclusivo para las mismas. Sin embargo, considero
+            importante al menos mencionarlas en este apartado.
+        </p>
+        <div class="arte-subtemas-container">
+            <div class="arte-subtema-card" data-subtema="pintura">
+                <span class="arte-subtema-label">?</span>
+                <span class="arte-subtema-title">Pintura</span>
+            </div>
+            <div class="arte-subtema-card" data-subtema="liminales">
+                <span class="arte-subtema-label">?</span>
+                <span class="arte-subtema-title">Espacios Liminales</span>
+            </div>
+            <div class="arte-subtema-card" data-subtema="fotografia">
+                <span class="arte-subtema-label">?</span>
+                <span class="arte-subtema-title">Fotografía</span>
+            </div>
+        </div>
+        <div id="arte-subtema-content" class="arte-subtema-content"></div>
+        `
     },
     flipnote: {
         title: "Flipnote",
@@ -79,7 +104,29 @@ const temas = {
             <button id="flipnote-desplegar-btn" class="btn-link" style="margin-bottom:1em;">Desplegar</button>
             <div id="flipnote-extra" style="display:none;">
                 <div class="flipnote-grid">
+                    <iframe src="https://www.sudomemo.net/watch/embed/EBB528_1487A71CE1DC9_002" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/68FD7F_17C93454F5C65_001" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/CD64B8_14F3092F21731_036" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/E463D3_0E8B2D914CF8D_002" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/F02A2C_1469506BB756F_000" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/7BEAB3_14122802BEA8B_002" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/A0A1B3_1742485661DC7_117" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/192B37_00C79D489D9C0_028" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/DC65E9_17797FFC0F9F1_002" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/5188D5_117922ECD8EDB_009" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/FDE511_16CBC603D87AE_033" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/56EB5E_1818AA8A3422D_001" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/B4F8FE_17741FC18E2DF_008" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/FE3A14_157D64C147013_037" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://archive.sudomemo.net/watch/embed/mnk4mnxgyfwkdrwq12wwryq5cven" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://archive.sudomemo.net/watch/embed/mfkieugancm54cloe4zwtegsqvac" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/4B0ED0_15ADF07A76C51_004" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://archive.sudomemo.net/watch/embed/mtgggoi4rmnnddoo2zzwlb5rkvbc" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://archive.sudomemo.net/watch/embed/mm2bhmgtnmlhcj4t2hhtlysjyybc" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/5372C9_105C11F3D9959_000" scrolling="no" frameborder="0" height="429" width="512"></iframe>
+                    <iframe src="https://www.sudomemo.net/watch/embed/D7231C_17ECF9FCCD9CA_003" scrolling="no" frameborder="0" height="429" width="512"></iframe>
                     <iframe src="https://www.sudomemo.net/watch/embed/5372C9_0EDDE7805A2D1_033" scrolling="no" frameborder="0" width="470" height="390"></iframe>
+                    <iframe src="https://archive.sudomemo.net/watch/embed/mtgggoi4rmnndddoq2fts53uc2bn" scrolling="no" frameborder="0" height="429" width="512"></iframe>
                 </div>
             </div>
         </p>`
@@ -91,6 +138,34 @@ const temas = {
             Porque el castillo también tiene habitaciones secretas.
         </p>`
     }
+};
+
+// Subtemas de arte
+const arteSubtemas = {
+    pintura: `
+        <h3>Pintura</h3>
+        <p>
+            La pintura es una de las formas más antiguas y universales de expresión artística. Desde las cuevas prehistóricas hasta el arte contemporáneo, la pintura ha sido un medio para plasmar emociones, ideas y visiones del mundo.
+            <br><br>
+            Aquí compartiré algunas obras, estilos y curiosidades sobre la pintura que me resultan fascinantes.
+        </p>
+    `,
+    liminales: `
+        <h3>Espacios Liminales</h3>
+        <p>
+            Los espacios liminales son lugares de transición, escenarios que evocan sensaciones de nostalgia, misterio o inquietud. Son imágenes de pasillos vacíos, parques desiertos al atardecer, habitaciones iluminadas por luces artificiales...
+            <br><br>
+            Este subtema explora la estética y el sentimiento detrás de estos espacios.
+        </p>
+    `,
+    fotografia: `
+        <h3>Fotografía</h3>
+        <p>
+            La fotografía captura instantes irrepetibles y nos permite ver el mundo desde nuevas perspectivas. Desde retratos hasta paisajes urbanos, la fotografía es tanto documento como arte.
+            <br><br>
+            Aquí encontrarás ejemplos, reflexiones y recomendaciones sobre fotografía.
+        </p>
+    `
 };
 
 // Asignar eventos a los enlaces de temas
@@ -139,6 +214,28 @@ function setTema(tema) {
                 }
             });
         }
+    }
+
+    // Lógica para subtemas de arte
+    if (tema === "arte") {
+        document.querySelectorAll('.arte-subtema-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                card.classList.add('hovered');
+            });
+            card.addEventListener('mouseleave', function() {
+                card.classList.remove('hovered');
+            });
+            card.addEventListener('click', function() {
+                const subtema = card.getAttribute('data-subtema');
+                const contentDiv = document.getElementById('arte-subtema-content');
+                if (arteSubtemas[subtema]) {
+                    contentDiv.innerHTML = arteSubtemas[subtema];
+                }
+                // Opcional: resalta la tarjeta seleccionada
+                document.querySelectorAll('.arte-subtema-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+            });
+        });
     }
 }
 
