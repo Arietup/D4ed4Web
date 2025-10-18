@@ -65,8 +65,20 @@ const temas = {
             rápidamente.
             <br><br>
             Te invito a interactuar y leer un poco sobre estos tres titulos detallados a continuación.
-            
-        </p>`
+        </p>
+        <div class="juegos-subtemas-container">
+            <div class="juego-card juego-minecraft" data-juego="minecraft">
+                <span class="juego-title">Minecraft</span>
+            </div>
+            <div class="juego-card juego-undertale" data-juego="undertale">
+                <span class="juego-title">Undertale</span>
+            </div>
+            <div class="juego-card juego-blasphemous" data-juego="blasphemous">
+                <span class="juego-title">Blasphemous</span>
+            </div>
+        </div>
+        <div id="juego-subtema-content" class="juego-subtema-content"></div>
+        `
     },
     arte: {
         title: "Arte",
@@ -149,68 +161,6 @@ const temas = {
     }
 };
 
-// Subtemas de arte
-const arteSubtemas = {
-    pintura: `
-        <h3>Pintura</h3>
-        <p>
-            La pintura es una de las formas más antiguas y universales de expresión artística. Desde las cuevas prehistóricas hasta el arte contemporáneo, la pintura ha sido un medio para plasmar emociones, ideas y visiones del mundo.
-            <br><br>
-            Aquí compartiré algunas obras, estilos y curiosidades sobre la pintura que me resultan fascinantes.
-        </p>
-    `,
-    liminales: `
-        <h3>Espacios Liminales</h3>
-        <p>
-            Los espacios liminales son lugares de transición, escenarios que evocan sensaciones de nostalgia, misterio o inquietud. Son imágenes de pasillos vacíos, parques desiertos al atardecer, habitaciones iluminadas por luces artificiales...
-            <br><br>
-            Este subtema explora la estética y el sentimiento detrás de estos espacios.
-        </p>
-    `,
-    fotografia: `
-        <h3>Fotografía</h3>
-        <p>
-            La fotografía captura instantes irrepetibles y nos permite ver el mundo desde nuevas perspectivas. Desde retratos hasta paisajes urbanos, la fotografía es tanto documento como arte.
-            <br><br>
-            Aquí encontrarás ejemplos, reflexiones y recomendaciones sobre fotografía.
-        </p>
-    `
-};
-
-// Subtemas de juegos
-const juegosSubtemas = {
-    minecraft: `
-        <h3>Minecraft</h3>
-        <p>
-            <strong>Minecraft</strong> es mucho más que un simple juego de bloques. Es un espacio de creatividad infinita, donde cada mundo es único y cada aventura depende de ti. 
-            <br><br>
-            Lo que más me marcó de Minecraft es la sensación de libertad absoluta, la posibilidad de construir, explorar y perderme en paisajes generados al azar. 
-            <br><br>
-            La música ambiental, los atardeceres cúbicos y la tranquilidad de una cueva iluminada por antorchas son recuerdos que siempre llevo conmigo.
-        </p>
-    `,
-    undertale: `
-        <h3>Undertale</h3>
-        <p>
-            <strong>Undertale</strong> es una experiencia narrativa única, donde cada decisión importa y los personajes parecen tener vida propia. 
-            <br><br>
-            Lo que más admiro es cómo logra transmitir emociones profundas con recursos simples, y cómo juega con las expectativas del jugador. 
-            <br><br>
-            La música, el humor y los momentos de reflexión hacen de Undertale un juego inolvidable.
-        </p>
-    `,
-    blasphemous: `
-        <h3>Blasphemous</h3>
-        <p>
-            <strong>Blasphemous</strong> destaca por su atmósfera oscura, su arte inspirado en el folclore y la religión, y su desafiante jugabilidad. 
-            <br><br>
-            Es un viaje intenso a través de un mundo lleno de simbolismo, penitencia y belleza inquietante. 
-            <br><br>
-            Cada rincón de Cvstodia cuenta una historia, y cada enemigo vencido deja una marca en el jugador.
-        </p>
-    `
-};
-
 // Asignar eventos a los enlaces de temas
 document.addEventListener("DOMContentLoaded", function() {
     const temaIds = [
@@ -230,6 +180,9 @@ document.addEventListener("DOMContentLoaded", function() {
             });
         }
     });
+
+    // Inicializar subtemas si ya están en la página inicial
+    inicializarSubtemas();
 });
 
 function setTema(tema) {
@@ -241,6 +194,85 @@ function setTema(tema) {
     });
     // Agregar clase activa al tema seleccionado
     document.getElementById("tema-" + tema).classList.add('active-tema');
+
+    // Inicializar subtemas y botones interactivos después de renderizar el contenido
+    inicializarSubtemas();
+}
+
+function inicializarSubtemas() {
+    // Flipnote: botón desplegar
+    const btn = document.getElementById("flipnote-desplegar-btn");
+    const extra = document.getElementById("flipnote-extra");
+    if (btn && extra) {
+        btn.onclick = function() {
+            if (extra.style.display === "none" || extra.style.display === "") {
+                extra.style.display = "block";
+                btn.textContent = "Ocultar";
+                setTimeout(function() {
+                    extra.scrollIntoView({ behavior: "smooth", block: "start" });
+                }, 120);
+            } else {
+                extra.style.display = "none";
+                btn.textContent = "Desplegar";
+            }
+        };
+    }
+
+    // Arte: tarjetas interactivas
+    if (typeof window.arteSubtemas !== "undefined") {
+        document.querySelectorAll('.arte-subtema-card').forEach(function(card) {
+            // Elimina listeners previos para evitar duplicados
+            card.replaceWith(card.cloneNode(true));
+        });
+        document.querySelectorAll('.arte-subtema-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                card.classList.add('hovered');
+            });
+            card.addEventListener('mouseleave', function() {
+                card.classList.remove('hovered');
+            });
+            card.addEventListener('click', function() {
+                const subtema = card.getAttribute('data-subtema');
+                const contentDiv = document.getElementById('arte-subtema-content');
+                if (window.arteSubtemas && arteSubtemas[subtema]) {
+                    contentDiv.innerHTML = arteSubtemas[subtema];
+                    setTimeout(function() {
+                        contentDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 120);
+                }
+                document.querySelectorAll('.arte-subtema-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+            });
+        });
+    }
+
+    // Juegos: tarjetas interactivas
+    if (typeof window.juegosSubtemas !== "undefined") {
+        document.querySelectorAll('.juego-card').forEach(function(card) {
+            // Elimina listeners previos para evitar duplicados
+            card.replaceWith(card.cloneNode(true));
+        });
+        document.querySelectorAll('.juego-card').forEach(function(card) {
+            card.addEventListener('mouseenter', function() {
+                card.classList.add('hovered');
+            });
+            card.addEventListener('mouseleave', function() {
+                card.classList.remove('hovered');
+            });
+            card.addEventListener('click', function() {
+                const juego = card.getAttribute('data-juego');
+                const contentDiv = document.getElementById('juego-subtema-content');
+                if (window.juegosSubtemas && juegosSubtemas[juego]) {
+                    contentDiv.innerHTML = juegosSubtemas[juego];
+                    setTimeout(function() {
+                        contentDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }, 120);
+                }
+                document.querySelectorAll('.juego-card').forEach(c => c.classList.remove('selected'));
+                card.classList.add('selected');
+            });
+        });
+    }
 }
 
 // Efecto del ojo decorativo: solo vibración/temblor

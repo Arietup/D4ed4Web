@@ -36,6 +36,15 @@
         filter 0.25s cubic-bezier(.4,0,.2,1),
         opacity 0.25s cubic-bezier(.4,0,.2,1);
 }
+.arte-subtema-card[data-subtema="pintura"] {
+    background-image: url('../img/sources/icons/pintura-icon.jpeg');
+}
+.arte-subtema-card[data-subtema="liminales"] {
+    background-image: url('../img/sources/icons/liminal-icon.jpg');
+}
+.arte-subtema-card[data-subtema="fotografia"] {
+    background-image: url('../img/sources/icons/fotografia-icon.png');
+}
 .arte-subtema-card:hover,
 .arte-subtema-card.selected {
     filter: none;
