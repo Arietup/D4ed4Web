@@ -55,8 +55,17 @@ const temas = {
     juegos: {
         title: "Juegos",
         html: `<p>
-            Los juegos son una puerta a otros mundos. Desde clásicos retro hasta nuevas experiencias indie, aquí encontrarás recomendaciones, recuerdos y curiosidades sobre el arte de jugar.<br><br>
-            ¿Cuál es tu juego favorito y por qué?
+            ¿Consideras que alguna experiencia te ha impactado lo suficiente como para que siempre tengas en cuenta los escenerios a los que te dejaste adentrar?
+            <br><br>
+            Creo que este tipo de conexión es considerablemente más complicada de conseguir, esto debido al cambio de formato que ha sufrido el entretenimiento,
+            pasando de ser algo un poco más lento, inmersivo y pausado, a algo mucho más rápido, inmediato y efímero.
+            <br><br>
+            No soy el primero en tocar este tema, pero me parece importante recarcarlo. En lo personal, tengo tres titulos concretos que pueden ir más allá de esta
+            evolución del entretenimiento, saltandose la norma de lo inmediato e incluso dandole un descanso a esa constante sensación de necesitar que todo avance
+            rápidamente.
+            <br><br>
+            Te invito a interactuar y leer un poco sobre estos tres titulos detallados a continuación.
+            
         </p>`
     },
     arte: {
@@ -99,8 +108,8 @@ const temas = {
             Lo que más me fascina de las animaciones Flipnote es cómo, con recursos tan limitados, la comunidad logró expresar ideas, contar historias y transmitir emociones de una forma única y nostálgica. 
             <br><br>
             Aquí quiero compartirte algunas de mis Flipnotes favoritas, no solo por su calidad técnica, sino por la creatividad y el sentimiento que transmiten. Si alguna vez usaste una Nintendo DS, seguro recordarás la magia de ver estas pequeñas animaciones cobrar vida en la pantalla.
-            <br><br>
-            <hr style="border:0;border-top:1.5px solid #7a1a1a;margin:2em 0 1em 0;">
+            <br><br> 
+           
             <button id="flipnote-desplegar-btn" class="btn-link" style="margin-bottom:1em;">Desplegar</button>
             <div id="flipnote-extra" style="display:none;">
                 <div class="flipnote-grid">
@@ -168,6 +177,40 @@ const arteSubtemas = {
     `
 };
 
+// Subtemas de juegos
+const juegosSubtemas = {
+    minecraft: `
+        <h3>Minecraft</h3>
+        <p>
+            <strong>Minecraft</strong> es mucho más que un simple juego de bloques. Es un espacio de creatividad infinita, donde cada mundo es único y cada aventura depende de ti. 
+            <br><br>
+            Lo que más me marcó de Minecraft es la sensación de libertad absoluta, la posibilidad de construir, explorar y perderme en paisajes generados al azar. 
+            <br><br>
+            La música ambiental, los atardeceres cúbicos y la tranquilidad de una cueva iluminada por antorchas son recuerdos que siempre llevo conmigo.
+        </p>
+    `,
+    undertale: `
+        <h3>Undertale</h3>
+        <p>
+            <strong>Undertale</strong> es una experiencia narrativa única, donde cada decisión importa y los personajes parecen tener vida propia. 
+            <br><br>
+            Lo que más admiro es cómo logra transmitir emociones profundas con recursos simples, y cómo juega con las expectativas del jugador. 
+            <br><br>
+            La música, el humor y los momentos de reflexión hacen de Undertale un juego inolvidable.
+        </p>
+    `,
+    blasphemous: `
+        <h3>Blasphemous</h3>
+        <p>
+            <strong>Blasphemous</strong> destaca por su atmósfera oscura, su arte inspirado en el folclore y la religión, y su desafiante jugabilidad. 
+            <br><br>
+            Es un viaje intenso a través de un mundo lleno de simbolismo, penitencia y belleza inquietante. 
+            <br><br>
+            Cada rincón de Cvstodia cuenta una historia, y cada enemigo vencido deja una marca en el jugador.
+        </p>
+    `
+};
+
 // Asignar eventos a los enlaces de temas
 document.addEventListener("DOMContentLoaded", function() {
     const temaIds = [
@@ -198,45 +241,6 @@ function setTema(tema) {
     });
     // Agregar clase activa al tema seleccionado
     document.getElementById("tema-" + tema).classList.add('active-tema');
-
-    // Lógica para el botón "Desplegar" en Flipnote
-    if (tema === "flipnote") {
-        const btn = document.getElementById("flipnote-desplegar-btn");
-        const extra = document.getElementById("flipnote-extra");
-        if (btn && extra) {
-            btn.addEventListener("click", function() {
-                if (extra.style.display === "none") {
-                    extra.style.display = "block";
-                    btn.textContent = "Ocultar";
-                } else {
-                    extra.style.display = "none";
-                    btn.textContent = "Desplegar";
-                }
-            });
-        }
-    }
-
-    // Lógica para subtemas de arte
-    if (tema === "arte") {
-        document.querySelectorAll('.arte-subtema-card').forEach(function(card) {
-            card.addEventListener('mouseenter', function() {
-                card.classList.add('hovered');
-            });
-            card.addEventListener('mouseleave', function() {
-                card.classList.remove('hovered');
-            });
-            card.addEventListener('click', function() {
-                const subtema = card.getAttribute('data-subtema');
-                const contentDiv = document.getElementById('arte-subtema-content');
-                if (arteSubtemas[subtema]) {
-                    contentDiv.innerHTML = arteSubtemas[subtema];
-                }
-                // Opcional: resalta la tarjeta seleccionada
-                document.querySelectorAll('.arte-subtema-card').forEach(c => c.classList.remove('selected'));
-                card.classList.add('selected');
-            });
-        });
-    }
 }
 
 // Efecto del ojo decorativo: solo vibración/temblor

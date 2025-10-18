@@ -140,7 +140,6 @@ body {
     border: 2.5px solid #fff;
     margin: 0;
     padding: 3rem 3.5rem 2.5rem 3.5rem;
-    /* Un poco más angosta, pero no tanto */
     max-width: 660px;
     min-width: 300px;
     width: 100%;
@@ -176,10 +175,6 @@ body {
     image-rendering: pixelated;
     filter: grayscale(100%);
 }
-#main-content::-webkit-scrollbar-track:active {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAIAAAACCAIAAAD91JpzAAAAEElEQVQIW2No6+pjgAAgCwAWogM9VKrgGQAAAABJRU5ErkJggg==");
-    filter: grayscale(100%);
-}
 #main-content::-webkit-scrollbar-thumb {
     border-top: 1px solid #cccccc;
     border-left: 1px solid #cccccc;
@@ -198,53 +193,12 @@ body {
     width: 16px;
     height: 16px;
     background-color: #cccccc;
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAN0lEQVR4Ae3MgQUAMBRDwU5fFF05lb/CARTBw2Ulof0DxPtcwp3hNuEYnjbcEW4TjuFpwx3h9gMWGgZ2Y/PT2gAAAABJRU5ErkJggg==");
-    background-position: bottom right;
-    background-repeat: no-repeat;
-    image-rendering: pixelated;
 }
 #main-content::-webkit-scrollbar-button {
-    border-top: 1px solid #cccccc;
-    border-left: 1px solid #cccccc;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
-    box-shadow: inset 1px 1px 0 0 white, inset -1px -1px 0 0 #868a8e;
-    display: block;
-    width: 16px;
-    height: 16px;
-    background-color: #cccccc;
-    image-rendering: pixelated;
-    background-repeat: no-repeat;
-    background-position: center center;
-}
-#main-content::-webkit-scrollbar-button:active {
-    background-position: 2px 2px;
-    border-top: 1px solid #868a8e;
-    border-left: 1px solid #868a8e;
-    border-bottom: 1px solid #868a8e;
-    border-right: 1px solid #868a8e;
-    box-shadow: none;
-}
-#main-content::-webkit-scrollbar-button:horizontal:decrement {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHklEQVQY02NgoBT8xyX8H5fwf1zCpOjAYwceV1EEAAO2D/HsQ4vsAAAAAElFTkSuQmCC");
-}
-#main-content::-webkit-scrollbar-button:horizontal:increment {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAHUlEQVQY02NgIB/8xy3xH7fEf9wS/0nUQZqrKAYAK44P8ZRmzLQAAAAASUVORK5CYII=");
-}
-#main-content::-webkit-scrollbar-button:vertical:decrement {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAYAAABWdVznAAAAGklEQVR4AWMYxuA/SYphmETFhDX9x4mHGQAAcL4P8dQiMq8AAAAASUVORK5CYII=");
-}
-#main-content::-webkit-scrollbar-button:vertical:increment {
-    background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAMCAQAAAD8fJRsAAAAF0lEQVQY02NgoBf4jwJxSOHQhcNAOgMAWWAP8Rv2U3UAAAAASUVORK5CYII=");
-}
-#main-content::-webkit-scrollbar-button:horizontal:increment:start,
-#main-content::-webkit-scrollbar-button:horizontal:decrement:end,
-#main-content::-webkit-scrollbar-button:vertical:increment:start,
-#main-content::-webkit-scrollbar-button:vertical:decrement:end {
     display: none;
 }
 
-/* Ojo decorativo solo con efecto de temblor */
+/* Ojo decorativo */
 .ojo-decorativo {
     position: fixed;
     right: 32px;
@@ -290,16 +244,10 @@ body {
     box-shadow: none;
 }
 .ojo-decorativo:hover {
-    /* Al acercar el mouse, activa el temblor */
     animation: ojo-temblor 0.42s infinite;
 }
 
-/* Responsive: ocultar figura en pantallas pequeñas */
-@media (max-width: 900px) {
-    .ojo-decorativo {
-        display: none;
-    }
-}
+/* Responsive */
 @media (max-width: 1100px) {
     .acerca-layout {
         flex-direction: column;
@@ -341,133 +289,8 @@ body {
         min-height: 55vh;
     }
 }
- 
-/* Estilos para la grilla de iframes */
-.flipnote-grid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.7em;
-    margin-bottom: 2em;
-}
-.flipnote-grid iframe {
-    border: 2px solid #7a1a1a;
-    background: #111;
-    border-radius: 6px;
-    box-shadow: 0 2px 12px #23232655;
-    width: 470px;
-    height: 390px;
-    max-width: 98vw;
-    max-height: 60vh;
-}
-
-/* Responsive para Flipnote */
 @media (max-width: 900px) {
-    .flipnote-grid iframe {
-        width: 98vw;
-        max-width: 98vw;
-        height: 180px;
-        max-height: 40vh;
-    }
-}
-
-/* Estilos para subtemas de arte */
-.arte-subtemas-container {
-    display: flex;
-    justify-content: center;
-    gap: 2.2em;
-    margin: 2.5em 0 1.5em 0;
-}
-.arte-subtema-card {
-    background: #18181b;
-    border: 2px solid #7a1a1a;
-    border-radius: 10px;
-    width: 110px;
-    height: 140px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 12px #23232699, 0 0 0 2px #fff2 inset;
-    position: relative;
-    transition: border 0.2s, box-shadow 0.2s, background 0.2s;
-    overflow: hidden;
-}
-.arte-subtema-card .arte-subtema-label {
-    font-size: 2.7em;
-    color: #fff;
-    opacity: 0.25;
-    font-family: 'Courier New', Courier, monospace;
-    position: absolute;
-    top: 18px;
-    left: 0;
-    right: 0;
-    text-align: center;
-    pointer-events: none;
-    transition: opacity 0.2s;
-}
-.arte-subtema-card .arte-subtema-title {
-    font-size: 1.1em;
-    color: #fff;
-    opacity: 0;
-    margin-top: 60px;
-    font-family: 'Courier New', Courier, monospace;
-    letter-spacing: 1px;
-    text-align: center;
-    transition: opacity 0.2s, margin-top 0.2s;
-    pointer-events: none;
-}
-.arte-subtema-card.hovered .arte-subtema-label,
-.arte-subtema-card.selected .arte-subtema-label {
-    opacity: 0;
-}
-.arte-subtema-card.hovered .arte-subtema-title,
-.arte-subtema-card.selected .arte-subtema-title {
-    opacity: 1;
-    margin-top: 0;
-}
-.arte-subtema-card.selected {
-    border: 2.5px solid #fff;
-    background: #232326;
-    box-shadow: 0 2px 18px #7a1a1a99, 0 0 0 2px #fff5 inset;
-}
-.arte-subtema-content {
-    margin: 2em auto 0 auto;
-    max-width: 480px;
-    background: #18181b;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    padding: 1.5em 1.2em;
-    color: #fff;
-    font-family: 'Courier New', Courier, monospace;
-    box-shadow: 0 2px 12px #23232655;
-    min-height: 80px;
-    font-size: 1em;
-    letter-spacing: 0.2px;
-    display: none;
-}
-.arte-subtema-content:empty {
-    display: none;
-}
-.arte-subtema-content:not(:empty) {
-    display: block;
-}
-
-/* Responsive para subtemas de arte */
-@media (max-width: 700px) {
-    .arte-subtemas-container {
-        flex-direction: column;
-        align-items: center;
-        gap: 1.2em;
-    }
-    .arte-subtema-card {
-        width: 90vw;
-        max-width: 220px;
-        height: 110px;
-    }
-    .arte-subtema-content {
-        max-width: 98vw;
-        padding: 1em 0.5em;
+    .ojo-decorativo {
+        display: none;
     }
 }

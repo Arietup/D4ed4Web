@@ -1,0 +1,121 @@
+.juegos-subtemas-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2.2em;
+    margin: 2.5em 0 1.5em 0;
+}
+.juego-card {
+    background: #18181b;
+    border: 2px solid #7a1a1a;
+    border-radius: 10px;
+    width: 130px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 12px #23232699, 0 0 0 2px #fff2 inset;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 0.5em;
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(1) brightness(0.45) blur(1px);
+    transition: filter 0.35s cubic-bezier(.4,0,.2,1);
+}
+.juego-minecraft {
+    background-image: url('../img/sources/icons/minecraft-icon-preview.png');
+    filter: grayscale(1) brightness(0.7);
+}
+.juego-undertale {
+    background-image: url('../img/sources/icons/flowey-icon-preview.png');
+    filter: grayscale(1) brightness(0.7);
+}
+.juego-blasphemous {
+    background-image: url('../img/sources/icons/blasphemous-icon-preview.png');
+    filter: grayscale(1) brightness(0.7);
+}
+.juego-card .juego-title {
+    position: relative;
+    z-index: 2;
+    font-size: 1.15em;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    letter-spacing: 1px;
+    text-align: center;
+    opacity: 0.92;
+    text-shadow: 0 2px 8px #000, 0 0 2px #7a1a1a;
+    background: rgba(0,0,0,0.18);
+    border-radius: 4px;
+    padding: 0.3em 0.7em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    transition: background 0.2s, opacity 0.2s;
+}
+.juego-card.hovered .juego-title,
+.juego-card.selected .juego-title {
+    background: rgba(0,0,0,0.32);
+    opacity: 1;
+}
+.juego-card.hovered,
+.juego-card.selected {
+    filter: none;
+}
+.juego-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    z-index: 2;
+    transition: opacity 0.3s;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    filter: none;
+}
+.juego-minecraft::after {
+    background-image: url('../img/sources/icons/minecraft-icon.gif');
+}
+.juego-undertale::after {
+    background-image: url('../img/sources/icons/flowey-icon.gif');
+}
+.juego-blasphemous::after {
+    background-image: url('../img/sources/icons/blasphemous-icon.gif');
+}
+.juego-card.hovered::after,
+.juego-card.selected::after {
+    opacity: 1;
+}
+.juego-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, #18181b 60%, #7a1a1a88 100%);
+    opacity: 0.55;
+    z-index: 3;
+    pointer-events: none;
+    transition: opacity 0.2s;
+}
+.juego-card.hovered::before,
+.juego-card.selected::before {
+    opacity: 0.35;
+}
+@media (max-width: 700px) {
+    .juegos-subtemas-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2em;
+    }
+    .juego-card {
+        width: 90vw;
+        max-width: 220px;
+        height: 110px;
+    }
+    .juego-subtema-content {
+        max-width: 98vw;
+        padding: 1em 0.5em;
+    }
+}

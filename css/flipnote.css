@@ -1,0 +1,56 @@
+#flipnote-desplegar-btn {
+    display: block;
+    margin: 0 auto 1.2em auto;
+    padding: 0.5em 1.2em;
+    background: #18181b;
+    color: #fff;
+    border: 2px solid #7a1a1a;
+    border-radius: 5px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.2s, border 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+#flipnote-desplegar-btn:hover {
+    background: #232326;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 2px 8px #18181b;
+    transform: translateY(-2px);
+}
+#flipnote-desplegar-btn:active {
+    background: #232326;
+    border-color: #7a1a1a;
+    color: #fff;
+    box-shadow: 0 2px 8px #18181b;
+    transform: scale(0.98);
+}
+.flipnote-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7em;
+    margin-bottom: 2em;
+}
+.flipnote-grid iframe {
+    border: 2px solid #7a1a1a;
+    background: #111;
+    border-radius: 6px;
+    box-shadow: 0 2px 12px #23232655;
+    width: 470px;
+    height: 390px;
+    max-width: 98vw;
+    max-height: 60vh;
+}
+@media (max-width: 900px) {
+    .flipnote-grid iframe {
+        width: 98vw;
+        max-width: 98vw;
+        height: 180px;
+        max-height: 40vh;
+    }
+}
