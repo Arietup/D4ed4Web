@@ -15,6 +15,8 @@ body {
     border-radius: 0;
     box-sizing: border-box;
 }
+
+/* Botón de enlace */
 .btn-link {
     display: inline-block;
     color: #fff;
@@ -23,18 +25,19 @@ body {
     padding: 0.3em 0.8em;
     margin-bottom: 0.2em;
     text-decoration: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     font-size: 1em;
-    transition: background 0.2s, color 0.2s;
     border-radius: 2px;
     text-align: center;
+    transition: background 0.2s, color 0.2s, border-color 0.2s;
 }
 .btn-link:hover {
     background: #7a1a1a;
     color: #fff;
     border-color: #7a1a1a;
 }
-/* --- MÚSICA --- */
+
+/* --- Layout principal --- */
 .music-layout {
     display: flex;
     flex-direction: row;
@@ -42,22 +45,18 @@ body {
     align-items: flex-start;
     min-height: 100vh;
     width: 100vw;
-    padding-left: 32px;
-    padding-right: 32px;
+    padding: 32px;
     box-sizing: border-box;
 }
 .music-layout .nav-card {
-    margin-left: 0;
-    margin-right: 24px;
-    margin-top: 32px;
-    margin-bottom: 40px;
+    margin: 32px 24px 40px 0;
     min-height: 400px;
     background: #000;
     border: 2px solid #fff;
     border-right: 4px double #7a1a1a;
     width: 180px;
     min-width: 140px;
-    padding: 1.5rem 1rem 1.5rem 1rem;
+    padding: 1.5rem 1rem;
     font-size: 0.98rem;
 }
 .music-layout .nav-card h2 {
@@ -81,18 +80,20 @@ body {
     color: #fff;
     text-decoration: underline;
     font-size: 1rem;
-    transition: color 0.2s, background 0.2s, border-bottom 0.2s;
     border-bottom: 1px dotted #7a1a1a;
     padding: 2px 2px;
     border-radius: 2px;
     font-weight: bold;
     letter-spacing: 0.5px;
+    transition: color 0.2s, background 0.2s, border-bottom 0.2s;
 }
 .music-layout .nav-card a:hover {
     color: #7a1a1a;
     background: #fff1;
     border-bottom: 1px solid #fff;
 }
+
+/* --- Columnas de contenido --- */
 .music-columns {
     display: flex;
     flex-direction: column;
@@ -101,6 +102,8 @@ body {
     max-width: 600px;
     margin-top: 32px;
 }
+
+/* --- Tarjetas de playlists y canciones --- */
 .playlist-card, .songs-card {
     background: rgba(0,0,0,0.92);
     border: 2px double #fff;
@@ -133,8 +136,7 @@ body {
     color: #fff;
     margin: 0 0 1.2rem 0;
     letter-spacing: 1.5px;
-    border-bottom: none;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     font-weight: normal;
     position: relative;
     z-index: 1;
@@ -150,6 +152,8 @@ body {
     margin-top: 4px;
     background: linear-gradient(90deg, #7a1a1a 60%, transparent 100%);
 }
+
+/* --- Playlists de Spotify --- */
 .playlist-list.grid-2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -185,7 +189,7 @@ body {
     color: #fff;
     font-size: 1.05em;
     letter-spacing: 1px;
-    font-family: 'Courier New', Courier, monospace;
+    font-family: inherit;
     opacity: 0.95;
 }
 .playlist-frame-wrap {
@@ -212,190 +216,290 @@ body {
     display: block;
     margin-top: 0.2em;
 }
-/* --- CANCIONES EN FILAS DE 3 --- */
-.grid-5 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-    width: 100%;
-    padding-bottom: 0.5em;
-}
-.grid-5 li {
-    margin-bottom: 0;
-    min-width: 0;
-    word-break: break-word;
-    background: rgba(20,20,20,0.92);
-    border: 1.5px dashed #fff;
-    border-radius: 10px;
-    padding: 1.2em 1em 1em 1em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    box-sizing: border-box;
-    min-height: 220px;
-}
-.grid-5 b {
-    font-size: 1.08em;
-    text-align: center;
-    margin-bottom: 0.7em;
-    display: block;
-    width: 100%;
-    word-break: break-word;
-    letter-spacing: 1px;
-}
-.grid-5 iframe {
-    width: 100%;
-    min-width: 0;
-    max-width: 100%;
-    height: 100px;
-    border-radius: 6px;
-    border: 2px solid #fff;
-    background: #111;
-    box-sizing: border-box;
-    margin-bottom: 0.5em;
-}
-@media (max-width: 1100px) {
-    .grid-5 {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-@media (max-width: 700px) {
-    .grid-5 {
-        grid-template-columns: 1fr;
-    }
-}
-/* Canciones en filas de 2, bien centradas y amigables */
+
+/* --- Canciones recomendadas (SoundCloud) --- */
+/* Mejor presentación para canciones recomendadas (SoundCloud) */
+/* Elimina el formato de tarjeta, deja solo el iframe y el div nativo de SoundCloud, centrados y con separación mínima */
 .music-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2.5em;
-    width: 100%;
-    padding-bottom: 0.5em;
-    justify-items: center;
-}
-.music-grid li {
-    background: rgba(20,20,20,0.92);
-    border: 1.5px dashed #fff;
-    border-radius: 14px;
-    padding: 2em 1.5em 1.5em 1.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    box-sizing: border-box;
-    min-width: 0;
-    max-width: 340px;
+    gap: 1.1em;
     width: 100%;
+    padding-bottom: 0.5em;
     margin: 0 auto;
-    transition: border-color 0.2s, box-shadow 0.2s;
 }
-.music-grid li:hover {
-    border-color: #7a1a1a;
-    box-shadow: 0 0 0 2px #7a1a1a99 inset;
-}
-.music-frame-wrap {
+
+.music-grid li {
     width: 100%;
-    max-width: 240px;
-    aspect-ratio: 1/1;
-    background: #111;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 1.2em;
+    max-width: 600px; /* Permite el ancho máximo del embed de SoundCloud */
+    margin: 0 auto;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 }
-.music-frame-wrap iframe {
+
+.music-grid iframe {
     width: 100%;
-    height: 100%;
+    min-width: 320px;
+    max-width: 600px;
+    height: 166px;
     border: none;
     border-radius: 8px;
-    background: #111;
+    background: #18181b;
     display: block;
-}
-.music-grid b {
-    font-size: 1.12em;
-    text-align: center;
+    box-shadow: 0 2px 12px #23232633;
     margin-bottom: 0.2em;
-    display: block;
+}
+
+/* El div nativo de SoundCloud debajo del iframe */
+.music-grid li > div {
     width: 100%;
-    word-break: break-word;
-    letter-spacing: 1px;
-    color: #fff;
-    margin-top: 0.5em;
+    max-width: 600px;
+    text-align: left;
+    font-size: 10px;
+    color: #cccccc;
+    margin-bottom: 0.5em;
+    background: none;
+    padding: 0;
 }
-@media (max-width: 900px) {
-    .music-layout {
-        padding-left: 8px;
-        padding-right: 8px;
-    }
-    .music-grid {
-        grid-template-columns: 1fr;
-    }
-    .music-grid li {
-        max-width: 98vw;
-    }
+
+/* Opcional: mejora visual de los enlaces nativos de SoundCloud */
+.music-grid li > div a {
+    color: #cccccc;
+    text-decoration: none;
+    transition: color 0.18s;
 }
-/* Lista minimalista de canciones recomendadas */
-.song-list-minimal {
+.music-grid li > div a:hover {
+    color: #7a1a1a;
+    text-decoration: underline;
+}
+
+/* Música recomendada: lista simple y minimalista */
+.music-list {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2em;
-}
-.song-list-minimal li {
-    background: rgba(20,20,20,0.92);
-    border: 1.5px dashed #fff;
-    border-radius: 14px;
-    padding: 1.5em 1em;
     display: flex;
-    align-items: center;
-    gap: 1.2em;
-    max-width: 380px;
+    flex-direction: column;
+    gap: 0.7em;
+}
+
+.music-list li {
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+}
+
+.music-link {
+    display: block;
+    width: 100%;
+    max-width: 420px;
     margin: 0 auto;
-}
-.song-list-minimal img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 8px;
-    border: 2px solid #fff;
-    background: #111;
-}
-.song-list-minimal .song-title {
-    font-weight: bold;
+    padding: 0.7em 1em;
     color: #fff;
-    font-size: 1.08em;
-    display: block;
-    margin-bottom: 0.2em;
-}
-.song-list-minimal .song-track {
-    color: #fff;
-    font-size: 1em;
-    display: block;
-    margin-bottom: 0.7em;
-    opacity: 0.85;
-}
-.song-list-minimal .song-link {
-    display: inline-block;
-    color: #fff;
-    background: #7a1a1a;
-    border: 1px solid #fff;
-    border-radius: 4px;
-    padding: 0.2em 0.8em;
+    background: #18181b;
+    border-radius: 7px;
     text-decoration: none;
-    font-size: 0.98em;
-    transition: background 0.2s, color 0.2s;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.08em;
+    letter-spacing: 0.5px;
+    transition: background 0.18s, color 0.18s;
+    border: 1.5px solid #232326;
+    box-shadow: 0 2px 8px #23232633;
+    text-align: left;
 }
-.song-list-minimal .song-link:hover {
-    background: #fff;
-    color: #7a1a1a;
+
+.music-link:hover,
+.music-link:focus {
+    background: #7a1a1a;
+    color: #fff;
+    border-color: #fff;
+    outline: none;
 }
-@media (max-width: 900px) {
-    .song-list-minimal {
-        grid-template-columns: 1fr;
+
+/* Ventana principal más ancha y con tabs/ficheros verticales fuera del contenido */
+.music-main-window {
+    background: rgba(0,0,0,0.92);
+    border: 2px double #fff;
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 780px;
+    min-width: 340px;
+    margin-top: 32px;
+    margin-left: 0;
+    position: relative;
+    overflow: visible; /* Cambiado para permitir que los tabs sobresalgan */
+    padding: 2.2rem 2.2rem 1.7rem 2.2rem;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+}
+
+/* Tabs verticales fuera de la ventana de contenido, unidos visualmente al borde blanco */
+.music-tabs {
+    position: absolute;
+    top: 38px;
+    left: calc(100% + 2px); /* Desplaza los botones 2px a la derecha para cubrir el borde blanco */
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: auto;
+    z-index: 10;
+}
+
+/* Botones con borde izquierdo blanco para simular unión al borde de la ventana */
+.music-tab {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    background: #18181b;
+    color: #fff;
+    border: 2px solid #232326;
+    border-left: 2px solid #fff; /* Borde izquierdo blanco para unión visual */
+    border-right: 4px solid #7a1a1a;
+    border-radius: 0 14px 14px 0;
+    padding: 0.7em 1.5em 0.7em 1.1em;
+    cursor: pointer;
+    box-shadow: 2px 0 8px #23232633;
+    transition: background 0.18s, color 0.18s, border 0.18s;
+    outline: none;
+    position: relative;
+    min-width: 130px;
+    text-align: left;
+    margin-left: 0;
+}
+.music-tab:last-child {
+    border-right: 4px solid #fff;
+    border-left: 2px solid #fff;
+    border-radius: 0 14px 14px 0;
+    text-align: left;
+    margin-left: 0;
+}
+.music-tab:not(.active-tab):hover {
+    background: #232326;
+    color: #fff;
+    border-right: 4px solid #7a1a1a;
+}
+.music-tab.active-tab {
+    background: #232326;
+    color: #fff;
+    font-weight: bold;
+    border-right: 4px solid #fff;
+    border-left: 2px solid #fff;
+    z-index: 11;
+}
+
+/* Pequeño "rasgado" en el borde para dar sensación de fichero antiguo */
+.music-tab::after {
+    content: "";
+    position: absolute;
+    right: -8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 10px;
+    height: 28px;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 2px,
+        #7a1a1a 2px,
+        #7a1a1a 4px
+    );
+    opacity: 0.5;
+    border-radius: 0 8px 8px 0;
+    pointer-events: none;
+    z-index: 1;
+}
+.music-tab.active-tab::after {
+    background: repeating-linear-gradient(
+        90deg,
+        #fff,
+        #fff 2px,
+        #7a1a1a 2px,
+        #7a1a1a 4px
+    );
+    opacity: 0.7;
+}
+
+/* Responsive: tabs dentro del contenido en pantallas pequeñas */
+@media (max-width: 1100px) {
+    .music-main-window {
+        max-width: 98vw;
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+        flex-direction: column;
+    }
+    .music-tabs {
+        position: static;
+        flex-direction: row;
+        margin-left: 0;
+        margin-top: 1em;
+        align-items: flex-start;
+        justify-content: flex-start;
+        height: auto;
+        left: 0;
+        top: 0;
+    }
+    .music-tab,
+    .music-tab:last-child {
+        border-radius: 8px 8px 0 0;
+        min-width: 90px;
+        text-align: center;
+        padding: 0.5em 1em;
+        border-right: 2px solid #232326;
+        border-left: 2px solid #232326;
+    }
+    .music-tab::after {
+        display: none;
     }
 }
+
+/* Responsive para ventana principal y tabs verticales */
+@media (max-width: 1100px) {
+    .music-main-window {
+        max-width: 98vw;
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+    .music-tabs {
+        top: 10px;
+        right: 10px;
+    }
+    .music-content {
+        min-height: 180px;
+    }
+    .music-list, .playlist-list {
+        max-width: 98vw;
+    }
+}
+@media (max-width: 900px) {
+    .music-grid {
+        transform: none;
+    }
+    .music-grid li {
+        max-width: 98vw;
+        padding: 0.7em 0.2em;
+    }
+    .music-grid iframe {
+        max-width: 98vw;
+        height: 180px;
+    }
+}
+@media (max-width: 700px) {
+    .music-columns {
+        max-width: 98vw;
+    }
+    .playlist-card, .songs-card {
+        padding: 1.2rem 0.7rem 1rem 0.7rem;
+    }
+}
+
+/* --- Eliminar estilos no usados para optimización --- */
+/* .grid-5 y .song-list-minimal se mantienen solo si se usan en otras partes */
 
