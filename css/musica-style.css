@@ -1,6 +1,6 @@
 /* --- Estilos generales y para MUSICA --- */
 body.bg-musica {
-    background: url('../img/backround/bg_musica.gif') no-repeat center center fixed;
+    background: url('../img/backround/bg_musica2.gif') no-repeat center center fixed;
     background-size: cover;
 }
 body {
@@ -427,6 +427,26 @@ body {
         #7a1a1a 4px
     );
     opacity: 0.7;
+}
+
+/* Scroll interno para la lista de playlists, máximo 4 visibles */
+.playlist-scroll {
+    max-height: 410px; /* Aproximadamente 4 playlists de altura */
+    overflow-y: auto;
+    padding-right: 4px; /* Espacio para scrollbar */
+}
+
+/* Opcional: mejora visual del scrollbar solo en la lista de playlists */
+.playlist-scroll::-webkit-scrollbar {
+    width: 8px;
+    background: #18181b;
+}
+.playlist-scroll::-webkit-scrollbar-thumb {
+    background: #7a1a1a;
+    border-radius: 4px;
+}
+.playlist-scroll::-webkit-scrollbar-thumb:hover {
+    background: #fff;
 }
 
 /* Responsive: tabs dentro del contenido en pantallas pequeñas */

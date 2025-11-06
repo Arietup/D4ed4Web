@@ -16,8 +16,33 @@ const temas = {
         </p>
         <img src="img/sources/prayer.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
         <p>
-            Esta es una pequeña prueba de navegación oculta.
-        </p>`
+            Sí, la imagen cambió, Supongo que tú también.<br>
+            Existe la idea de pensar que estoy realmente hablando contigo, y si es así. <br>
+            ¿En verdad eres tú? De todas maneras no lo quiero saber.<br> <br>
+            
+            Te vuelvo a hacer la misma pregunta, ¿Por qué ya no sonríes en las fotos? <br>
+            ¿Qué te trajo aquí? Contesta, De tantas veces que lo repetiste, ¿Ya moriste?. ¿Tu búsqueda insaciable
+            y deseo de autodestrucción ya te consumió? <br>
+            ¿Ya notaste que es todo tu culpa? ¿Sigues sin entender que mucho ha sido porque lo permitiste? <br> <br>
+            ¿Te da asco verte al espejo? Crees que algo va a cambiar porque la vida te lo debe. No fue una pregunta.
+            <br>
+
+            Siempre lo supiste, o así dices que es. ¿Qué hay del resto de cosas que siempre supiste y directamente
+            no te importa? <br> <br>
+            Te resulta chisotoso y cuando no te lo parece aparentas vergüenza o incomodidad pero nisiquiera eso
+            es verdad. <br>
+            Tu falsa fachada, tu máscara, tu escudo. <br>
+            La evolución de tu egoísmo escudado en las contadas buenas acciones que en algún momento
+            hiciste. <br> 
+            <br><br>
+            
+            Al final ¿Conseguiste lo que querías?<br><br>
+            Nadie te va a salvar.
+            Te odio, pero no puedo evitar sentir lástima por ti.
+            Espero que encuentres paz algún día.
+        </p>
+        <img src="img/sources/what-now.gif" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">`
+        
     },
     yo: {
         title: "¿Yo?",
@@ -83,17 +108,18 @@ const temas = {
     arte: {
         title: "Arte",
         html: `<p>
-            Dentro de este apartado me gustaría profundizar princpilamente en el arte visual, como la pintura y la fotografía.
-            Puedo comprender que existen muchisimas formas de expresión, incluyendo las menos convencionales como el arte digital, el pixel art, el arte generativo, entre otros, pero
-            Al menos en este espacio trataré de enfocarme en las formas más tradicionales y alguna otra que no lo sea tanto.
+            Dentro de este apartado me gustaría profundizar principalmente en el arte visual, como la pintura y 
+            la fotografía. Puedo comprender que existen muchísimas formas de expresión, incluyendo las menos 
+            convencionales como el arte digital, el pixel art, el arte generativo, entre otros, pero al menos 
+            en este espacio trataré de enfocarme en las formas más tradicionales y alguna otra que no lo sea 
+            tanto. No agregaré expresiones de arte como el cine, libros o música, ya que considero estas deben 
+            de tener un espacio exclusivo para las mismas, aunque es importante al menos mencionarlas aquí.
             <br><br>
-            Entrando en detalle, Este apartado se podría llegar a tornar un tanto extenso, sin embargo, trataré de llevarlo de la manera más ordenada, amena y disfrutable posible, presentandote
-            lo que personalmente más capta mi antención y más interesante me parece.
-            <br><br>
-            Espero disfrutes de los distintos subtemas que se encuentran aquí y puedas encontrar al menos algo que te llame mínimamente la atención.
-            <br>
-            No agregaré expresiones de arte como el cine, libros o música, ya que considero estas deben de tener un espacio exclusivo para las mismas. Sin embargo, considero
-            importante al menos mencionarlas en este apartado.
+            Entrando en detalle, este apartado se podría llegar a tornar un tanto extenso, sin embargo, trataré 
+            de llevarlo de la manera más ordenada, amena y disfrutable posible, presentándote lo que 
+            personalmente más capta mi atención y más interesante me parece. Espero disfrutes de los distintos 
+            subtemas que se encuentran aquí y puedas encontrar al menos algo que te llame mínimamente la
+            atención.
         </p>
         <div class="arte-subtemas-container">
             <div class="arte-subtema-card" data-subtema="pintura">
@@ -197,6 +223,18 @@ function setTema(tema) {
 
     // Inicializar subtemas y botones interactivos después de renderizar el contenido
     inicializarSubtemas();
+
+    // Hacer scroll arriba en el contenedor de contenido principal
+    setTimeout(function() {
+        const mainContent = document.getElementById('main-content');
+        if (mainContent) {
+            if (typeof mainContent.scrollTo === "function") {
+                mainContent.scrollTo({ top: 0, behavior: "smooth" });
+            } else {
+                mainContent.scrollTop = 0;
+            }
+        }
+    }, 10);
 }
 
 function inicializarSubtemas() {
@@ -209,7 +247,11 @@ function inicializarSubtemas() {
                 extra.style.display = "block";
                 btn.textContent = "Ocultar";
                 setTimeout(function() {
-                    extra.scrollIntoView({ behavior: "smooth", block: "start" });
+                    // Animación de scroll down más pronunciada y notable (400px)
+                    const mainContent = document.getElementById('main-content');
+                    if (mainContent && typeof mainContent.scrollBy === "function") {
+                        mainContent.scrollBy({ top: 250, behavior: "smooth" });
+                    }
                 }, 120);
             } else {
                 extra.style.display = "none";
@@ -237,7 +279,11 @@ function inicializarSubtemas() {
                 if (window.arteSubtemas && arteSubtemas[subtema]) {
                     contentDiv.innerHTML = arteSubtemas[subtema];
                     setTimeout(function() {
-                        contentDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+                        // Animación de scroll down más pronunciada y notable (400px)
+                        const mainContent = document.getElementById('main-content');
+                        if (mainContent && typeof mainContent.scrollBy === "function") {
+                            mainContent.scrollBy({ top: 400, behavior: "smooth" });
+                        }
                     }, 120);
                 }
                 document.querySelectorAll('.arte-subtema-card').forEach(c => c.classList.remove('selected'));
@@ -265,7 +311,11 @@ function inicializarSubtemas() {
                 if (window.juegosSubtemas && juegosSubtemas[juego]) {
                     contentDiv.innerHTML = juegosSubtemas[juego];
                     setTimeout(function() {
-                        contentDiv.scrollIntoView({ behavior: "smooth", block: "start" });
+                        // Animación de scroll down más pronunciada y notable (400px)
+                        const mainContent = document.getElementById('main-content');
+                        if (mainContent && typeof mainContent.scrollBy === "function") {
+                            mainContent.scrollBy({ top: 400, behavior: "smooth" });
+                        }
                     }, 120);
                 }
                 document.querySelectorAll('.juego-card').forEach(c => c.classList.remove('selected'));
