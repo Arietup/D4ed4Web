@@ -1,0 +1,112 @@
+/* Overlay oscuro para el modo ojo */
+#ojo-overlay {
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background: #000 !important;
+    opacity: 1 !important;
+    transition: opacity 0.4s;
+    pointer-events: auto;
+}
+
+/* Ojo centrado y agrandado, aún más arriba */
+.ojo-decorativo.ojo-central {
+    position: fixed !important;
+    left: 50% !important;
+    top: 30% !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 260px !important;
+    height: 130px !important;
+    transform: translate(-50%, -50%) scale(2.1);
+    z-index: 1100 !important;
+    background: transparent !important;
+    transition: all 0.6s cubic-bezier(.77,0,.18,1.01);
+    box-shadow: 0 0 80px 20px #000b;
+    pointer-events: none;
+}
+
+/* Texto del ojo estilo Undertale, más arriba */
+#ojo-texto-undertale {
+    position: fixed;
+    left: 50%;
+    top: calc(30% + 80px);
+    transform: translateX(-50%);
+    z-index: 1201;
+    color: #fff;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1.35em;
+    text-align: center;
+    background: none;
+    padding: 0.5em 0 0 0;
+    letter-spacing: 0.5px;
+    min-width: 320px;
+    max-width: 90vw;
+    pointer-events: none;
+    user-select: none;
+    text-shadow: 0 2px 8px #000, 0 0 2px #000;
+    white-space: pre-line;
+    line-height: 1.6;
+    opacity: 1;
+    transition: opacity 0.2s;
+}
+
+/* Input y botón más abajo del texto */
+#ojo-input-undertale {
+    position: fixed;
+    left: 50%;
+    top: calc(30% + 260px);
+    transform: translateX(-50%);
+    z-index: 1202;
+    display: flex;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+    background: none;
+    pointer-events: auto;
+}
+#ojo-input-undertale input {
+    width: 260px;
+    max-width: 60vw;
+    padding: 0.5em 0.7em;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 1.5px solid #7a1a1a;
+    background: #232326;
+    color: #fff;
+    outline: none;
+    font-family: inherit;
+}
+#ojo-input-undertale button {
+    padding: 0.45em 1.2em;
+    font-size: 1em;
+    border-radius: 6px;
+    border: 1.5px solid #fff;
+    background: #7a1a1a;
+    color: #fff;
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.2s, color 0.2s;
+}
+#ojo-input-undertale button:hover {
+    background: #fff;
+    color: #7a1a1a;
+}
+
+/* Botón cerrar arriba a la derecha */
+#ojo-close-undertale {
+    position: fixed;
+    top: 2.5em;
+    right: 3em;
+    z-index: 1300;
+    color: #fff;
+    background: none;
+    border: none;
+    font-size: 2em;
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+#ojo-close-undertale:hover {
+    opacity: 1;
+}
