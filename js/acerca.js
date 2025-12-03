@@ -181,8 +181,47 @@ const temas = {
     sinsentido: {
         title: "Sin sentido",
         html: `<p>
-            A veces, lo mejor es dejarse llevar por el absurdo. Aquí caben pensamientos aleatorios, frases sin lógica y todo aquello que no encaja en ningún otro lado.<br><br>
-            Porque el castillo también tiene habitaciones secretas.
+            Considero que en algún momento todos podemos experimentar aquella sensación
+            de que todo carece totalmente de sentido, momentos en los cuales te puedes
+            llegar a desconectar de aquellas cosas que nos vuelve seres que viven en sociedad.
+            <br><br>
+            Para considerarlo un problema es cuando esto deja de ser un momento y se convierte
+            en una realidad. Entonces te consulto: ¿Realmente qué es lo que te hace ser tú?
+            ¿Qué es aquello que conforma y le da vida a tu personalidad? ¿Estás siendo
+            simplemente parte de algo o en realidad eres tú? <br><br>
+
+            Al referirme al tú hago referencia a lo que por concepto se puede definir la 
+            respuesta al "¿Quién eres?", es decir, tus actos, tus pensamientos, tus vivencias.
+            <br><br>
+            ¿Eres capaz de describir y poner esto sobre un papel y ponerlo en un formato teórico?
+            <br>
+            Es un ejercicio interesante de hacer y que puede llegar a ayudar en muchisimos casos
+            extremos que se puedan pasar como ser humano. Incluso solo para brindarle aquella falta
+            de sentido al por qué de todo.
+            <br> <br>
+            Te invito a esforzarte y a permitir darte valor. Sin importar que aquello que consideras
+            que eres sea aquello que los demás piensen de tí. <br> <br>
+
+            ¿Qué te impide acabar con todo?
+            <br><br>
+            ¿Acaso no es todo un sinsentido?
+            <br><br>
+            Internaliza la respuesta, Si es el caso ¿Realmente te merece la pena basar tu
+            personalidad en el pensar que la vida te debe algo? <br><br>
+            <br><br>
+        <img src="img/sources/importancia.jpg" alt="Give a shit" style="max-width:100%;margin-top:1em;">
+            Nadie te va a salvar.
+            <br> <br>
+
+            Te invito a conversar con las siguientes palabras clave: <br>
+            - luz <br>
+            - oscuro <br>
+            - secreto <br>
+            - vacio <br>
+            - perdido <br>
+            - guia <br>
+            - destino <br>
+        <img src="img/sources/ojoref.jpg" alt="Ojo referencia" style="max-width:100%;margin-top:1em;">
         </p>`
     }
 };
