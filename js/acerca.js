@@ -1,98 +1,80 @@
 // Contenidos para cada tema
 const temas = {
     bienvenido: {
-        title: "Bienvenido/a",
+        title: "Welcome",
         html: `<p>
-            El objetivo de este espacio es representar y compartir varias cosas, te invito a explorar
-            alrededor de la página. <br>
-            Mi principal objetivo es crear un espacio interactivo e interesante donde puedas
-            perderte al menos un rato explorando.
+            The purpose of this space is to represent and share several things. I invite you to explore around the page.<br>
+            My main goal is to create an interactive and interesting space where you can lose yourself for a while exploring.
             <br>
-            En esta página encontrarás detalles que he tratado que no estén a simple vista,
-            por lo que te invito a brindarle atención a cada rincón. Inlcuso lo no tan visible.
+            On this page, you'll find details I've tried to keep out of plain sight, so I invite you to pay attention to every corner. Even the not-so-visible ones.
             <br><br>
-            ¡Explora los temas desde el menú de la izquierda y disfruta tu visita!
+            Explore the themes from the menu on the left and enjoy your visit!
             <br>
         </p>
-        <img src="img/sources/prayer.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
+        <img src="img/sources/prayer.jpg" alt="Welcome image" style="max-width:100%;margin-top:1em;">
         <p>
-            Sí, la imagen cambió, Supongo que tú también.<br>
-            Existe la idea de pensar que estoy realmente hablando contigo, y si es así. <br>
-            ¿En verdad eres tú? De todas maneras no lo quiero saber.<br> <br>
-            
-            Te vuelvo a hacer la misma pregunta, ¿Por qué ya no sonríes en las fotos? <br>
-            ¿Qué te trajo aquí? Contesta, De tantas veces que lo repetiste, ¿Ya moriste?. ¿Tu búsqueda insaciable
-            y deseo de autodestrucción ya te consumió? <br>
-            ¿Ya notaste que es todo tu culpa? ¿Sigues sin entender que mucho ha sido porque lo permitiste? <br> <br>
-            ¿Te da asco verte al espejo? Crees que algo va a cambiar porque la vida te lo debe. No fue una pregunta.
-            <br>
+            Yes, the image changed. I suppose you did too.<br>
+            There's the idea that I'm really talking to you, and if so—are you really you? Either way, I don't want to know.<br><br>
+            I'll ask you again: Why don't you smile in photos anymore?<br>
+            What brought you here? Answer me. After repeating it so many times, have you already died? Has your insatiable search and desire for self-destruction already consumed you?<br>
+            Have you noticed it's all your fault? Do you still not understand that much of it happened because you allowed it?<br><br>
+            Do you feel disgusted looking in the mirror? Do you think something will change because life owes you? That wasn't a question.<br>
 
-            Siempre lo supiste, o así dices que es. ¿Qué hay del resto de cosas que siempre supiste y directamente
-            no te importa? <br> <br>
-            Te resulta chisotoso y cuando no te lo parece aparentas vergüenza o incomodidad pero nisiquiera eso
-            es verdad. <br>
-            Tu falsa fachada, tu máscara, tu escudo. <br>
-            La evolución de tu egoísmo escudado en las contadas buenas acciones que en algún momento
-            hiciste. <br> 
+            You always knew, or so you say. What about the rest of the things you always knew and simply don't care about?<br><br>
+            You find it funny, and when you don't, you pretend embarrassment or discomfort, but not even that's true.<br>
+            Your false facade, your mask, your shield.<br>
+            The evolution of your selfishness shielded by the few good deeds you once did.<br>
             <br><br>
-            
-            Al final ¿Conseguiste lo que querías?<br><br>
-            Nadie te va a salvar.
-            Te odio, pero no puedo evitar sentir lástima por ti.
-            Espero que encuentres paz algún día.
+
+            In the end, did you get what you wanted?<br><br>
+            No one is going to save you.
+            I hate you, but I can't help but feel sorry for you.
+            I hope you find peace someday.
         </p>
-        <img src="img/sources/what-now.gif" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">`
+        <img src="img/sources/what-now.gif" alt="Welcome image" style="max-width:100%;margin-top:1em;">`
         
     },
     yo: {
-        title: "¿Yo?",
+        title: "Me?",
         html: `<p>
-            Este proyecto es pequeño, quizás no reciba toda mi atención. Pero existe, y eso basta. 
-            Acá es donde intento materializar una idea, darle forma a una idea que tengo presente.
+            This project is small, maybe it won't get all my attention. But it exists, and that's enough.
+            Here is where I try to materialize an idea, to give shape to something that's been on my mind.
 
             <br><br>
 
-            Al morir, solemos pensar que todo se desvanece y nos marchamos hacia el olvido. 
-            ¿Alguna vez te has preguntado qué queda de ti cuando ya no estás? 
-            Algunos dirán que son los hijos, los logros, los bienes, los recuerdos. Pero, ¿qué 
-            hay de aquello que realmente eres?
+            When we die, we tend to think everything fades and we leave for oblivion.
+            Have you ever wondered what remains of you when you're no longer here?
+            Some will say it's children, achievements, possessions, memories. But what about what you truly are?
 
             <br><br>
 
-            Me refiero a lo invisible: tus pensamientos, tus ideas, tus sentimientos, tus gustos, 
-            tus miedos, tus sueños, tus deseos, tus metas. 
-            ¿Todo eso desaparece sin dejar rastro?
+            I mean the invisible: your thoughts, your ideas, your feelings, your tastes, your fears, your dreams, your desires, your goals.
+            Does all that disappear without a trace?
 
-            <img src="img/sources/ready4talking.jpg" alt="Imagen de bienvenida" style="max-width:100%;margin-top:1em;">
+            <img src="img/sources/ready4talking.jpg" alt="Welcome image" style="max-width:100%;margin-top:1em;">
+
+            <br><br>
+
+            I think there are ways to leave a mark, even a small one. For me, this space is one of them.
+            Here, between lines and sounds, I leave fragments of what I am. Without looking for anything specific.
 
             <br><br>
 
-            Creo que hay formas de dejar una huella, aunque sea pequeña. Para mí, este espacio es una de 
-            ellas. 
-            Aquí, entre líneas y sonidos, dejo fragmentos de lo que soy. Sin buscar nada en especifico.
-
-            <br><br>
- 
-            Si llegaste hasta aquí, quizás encuentres algo que resuene contigo. O quizás no. 
-            Pero al menos, por un momento, existimos juntos en este mismo pensamiento.
+            If you made it this far, maybe you'll find something that resonates with you. Or maybe not.
+            But at least, for a moment, we exist together in this same thought.
         </p>`
     },
     juegos: {
-        title: "Juegos",
+        title: "Games",
         html: `<p>
-            
-            ¿Consideras que alguna experiencia te ha impactado lo suficiente como para que siempre tengas en cuenta los escenerios a los que te dejaste adentrar?
+            Have you ever considered if any experience has impacted you enough that you always keep in mind the scenarios you allowed yourself to enter?
             <br><br>
-            Creo que este tipo de conexión es considerablemente más complicada de conseguir, esto debido al cambio de formato que ha sufrido el entretenimiento,
-            pasando de ser algo un poco más lento, inmersivo y pausado, a algo mucho más rápido, inmediato y efímero.
+            I think this kind of connection is considerably harder to achieve, due to the change in the format of entertainment, which has gone from being something a bit slower, immersive, and paused, to something much faster, immediate, and fleeting.
             <br><br>
-            No soy el primero en tocar este tema, pero me parece importante recarcarlo. En lo personal, tengo tres titulos concretos que pueden ir más allá de esta
-            evolución del entretenimiento, saltandose la norma de lo inmediato e incluso dandole un descanso a esa constante sensación de necesitar que todo avance
-            rápidamente.
+            I'm not the first to touch on this topic, but I think it's important to highlight. Personally, I have three specific titles that go beyond this evolution of entertainment, breaking the norm of immediacy and even giving a break to that constant feeling of needing everything to move quickly.
             <br><br>
-            Para fines narrativos, por favor te invito a escuchar el audio adjunto.
-            <br><br>
-            Minecraft
+            For narrative purposes, please listen to the attached audio.
+          
             <br><br>
             <media-theme-tailwind-audio
                 style="--media-primary-color: #811818; --media-secondary-color: #000000; --media-accent-color: #930101; width:100%;max-width:400px;display:block;margin:0 auto 1.2em auto;">
@@ -103,7 +85,7 @@ const temas = {
                     crossorigin="anonymous"
                 ></audio>
             </media-theme-tailwind-audio>
-            Te invito a interactuar y leer un poco sobre estos tres titulos detallados a continuación.
+            I invite you to interact and read a bit about these three titles detailed below.
         </p>
         <div class="juegos-subtemas-container">
             <div class="juego-card juego-minecraft" data-juego="minecraft">
@@ -120,33 +102,24 @@ const temas = {
         `
     },
     arte: {
-        title: "Arte",
+        title: "Art",
         html: `<p>
-            Dentro de este apartado me gustaría profundizar principalmente en el arte visual, como la pintura y 
-            la fotografía. Puedo comprender que existen muchísimas formas de expresión, incluyendo las menos 
-            convencionales como el arte digital, el pixel art, el arte generativo, entre otros, pero al menos 
-            en este espacio trataré de enfocarme en las formas más tradicionales y alguna otra que no lo sea 
-            tanto. No agregaré expresiones de arte como el cine, libros o música, ya que considero estas deben 
-            de tener un espacio exclusivo para las mismas, aunque es importante al menos mencionarlas aquí.
+            In this section, I'd like to focus mainly on visual art, such as painting and photography. I understand there are many forms of expression, including less conventional ones like digital art, pixel art, generative art, among others, but at least here I'll try to focus on the more traditional forms and maybe a few that aren't so traditional. I won't add art forms like cinema, books, or music, as I believe these deserve their own exclusive space, though it's important to at least mention them here.
             <br><br>
-            Entrando en detalle, este apartado se podría llegar a tornar un tanto extenso, sin embargo, trataré 
-            de llevarlo de la manera más ordenada, amena y disfrutable posible, presentándote lo que 
-            personalmente más capta mi atención y más interesante me parece. Espero disfrutes de los distintos 
-            subtemas que se encuentran aquí y puedas encontrar al menos algo que te llame mínimamente la
-            atención.
+            Going into detail, this section could become somewhat extensive, however, I'll try to keep it as organized, pleasant, and enjoyable as possible, presenting what personally captures my attention and seems most interesting. I hope you enjoy the different subtopics here and can find at least something that catches your attention, even if just a little.
         </p>
         <div class="arte-subtemas-container">
             <div class="arte-subtema-card" data-subtema="pintura">
                 <span class="arte-subtema-label">?</span>
-                <span class="arte-subtema-title">Pintura</span>
+                <span class="arte-subtema-title">Painting</span>
             </div>
             <div class="arte-subtema-card" data-subtema="liminales">
                 <span class="arte-subtema-label">?</span>
-                <span class="arte-subtema-title">Espacios Liminales</span>
+                <span class="arte-subtema-title">Liminal Spaces</span>
             </div>
             <div class="arte-subtema-card" data-subtema="fotografia">
                 <span class="arte-subtema-label">?</span>
-                <span class="arte-subtema-title">Fotografía</span>
+                <span class="arte-subtema-title">Photography</span>
             </div>
         </div>
         <div id="arte-subtema-content" class="arte-subtema-content"></div>
@@ -155,14 +128,13 @@ const temas = {
     flipnote: {
         title: "Flipnote",
         html: `<p>
-            <strong>Flipnote Studio</strong> fue una aplicación icónica para la Nintendo DSi que permitió a miles de personas crear animaciones sencillas, creativas y, muchas veces, sorprendentes. 
+            <strong>Flipnote Studio</strong> was an iconic application for the Nintendo DSi that allowed thousands of people to create simple, creative, and often surprising animations.
             <br><br>
-            Lo que más me fascina de las animaciones Flipnote es cómo, con recursos tan limitados, la comunidad logró expresar ideas, contar historias y transmitir emociones de una forma única y nostálgica. 
+            What fascinates me most about Flipnote animations is how, with such limited resources, the community managed to express ideas, tell stories, and convey emotions in a unique and nostalgic way.
             <br><br>
-            Aquí quiero compartirte algunas de mis Flipnotes favoritas, no solo por su calidad técnica, sino por la creatividad y el sentimiento que transmiten. Si alguna vez usaste una Nintendo DS, seguro recordarás la magia de ver estas pequeñas animaciones cobrar vida en la pantalla.
-            <br><br> 
-           
-            <button id="flipnote-desplegar-btn" class="btn-link" style="margin-bottom:1em;">Desplegar</button>
+            Here I want to share some of my favorite Flipnotes, not just for their technical quality, but for the creativity and feeling they transmit. If you ever used a Nintendo DS, you'll surely remember the magic of seeing these little animations come to life on the screen.
+            <br><br>
+            <button id="flipnote-desplegar-btn" class="btn-link" style="margin-bottom:1em;">Show more</button>
             <div id="flipnote-extra" style="display:none;">
                 <div class="flipnote-grid">
                     <iframe src="https://www.sudomemo.net/watch/embed/EBB528_1487A71CE1DC9_002" scrolling="no" frameborder="0" height="429" width="512"></iframe>
@@ -193,49 +165,40 @@ const temas = {
         </p>`
     },
     sinsentido: {
-        title: "Sin sentido",
+        title: "Nonsense",
         html: `<p>
-            Considero que en algún momento todos podemos experimentar aquella sensación
-            de que todo carece totalmente de sentido, momentos en los cuales te puedes
-            llegar a desconectar de aquellas cosas que nos vuelve seres que viven en sociedad.
+            I think at some point we can all experience that feeling that everything is completely meaningless, moments in which you can disconnect from those things that make us beings who live in society.
             <br><br>
-            Para considerarlo un problema es cuando esto deja de ser un momento y se convierte
-            en una realidad. Entonces te consulto: ¿Realmente qué es lo que te hace ser tú?
-            ¿Qué es aquello que conforma y le da vida a tu personalidad? ¿Estás siendo
-            simplemente parte de algo o en realidad eres tú? <br><br>
+            It becomes a problem when this stops being a moment and becomes a reality. So I ask you: What really makes you who you are?
+            What is it that shapes and gives life to your personality? Are you simply part of something or are you really you?<br><br>
 
-            Al referirme al tú hago referencia a lo que por concepto se puede definir la 
-            respuesta al "¿Quién eres?", es decir, tus actos, tus pensamientos, tus vivencias.
+            When I refer to "you" I mean what by concept can be defined as the answer to "Who are you?", that is, your actions, your thoughts, your experiences.
             <br><br>
-            ¿Eres capaz de describir y poner esto sobre un papel y ponerlo en un formato teórico?
+            Are you able to describe and put this on paper and put it in a theoretical format?
             <br>
-            Es un ejercicio interesante de hacer y que puede llegar a ayudar en muchisimos casos
-            extremos que se puedan pasar como ser humano. Incluso solo para brindarle aquella falta
-            de sentido al por qué de todo.
-            <br> <br>
-            Te invito a esforzarte y a permitir darte valor. Sin importar que aquello que consideras
-            que eres sea aquello que los demás piensen de tí. <br> <br>
+            It's an interesting exercise to do and can help in many extreme cases one may go through as a human being. Even just to give some meaning to the lack of meaning in everything.
+            <br><br>
+            I invite you to make an effort and allow yourself to have value. No matter if what you consider yourself to be is what others think of you.<br><br>
 
-            ¿Qué te impide acabar con todo?
+            What stops you from ending it all?
             <br><br>
-            ¿Acaso no es todo un sinsentido?
+            Isn't it all nonsense?
             <br><br>
-            Internaliza la respuesta, Si es el caso ¿Realmente te merece la pena basar tu
-            personalidad en el pensar que la vida te debe algo? <br><br>
+            Internalize the answer. If that's the case, is it really worth basing your personality on thinking that life owes you something?<br><br>
             <br><br>
         <img src="img/sources/importancia.jpg" alt="Give a shit" style="max-width:100%;margin-top:1em;">
-            Nadie te va a salvar.
-            <br> <br>
+            No one is going to save you.
+            <br><br>
 
-            Te invito a conversar con las siguientes palabras clave: <br>
-            - luz <br>
-            - oscuro <br>
-            - secreto <br>
-            - vacio <br>
-            - perdido <br>
-            - guia <br>
-            - destino <br>
-        <img src="img/sources/ojoref.jpg" alt="Ojo referencia" style="max-width:100%;margin-top:1em;">
+            I invite you to converse with the following keywords:<br>
+            - light <br>
+            - dark <br>
+            - secret <br>
+            - empty <br>
+            - lost <br>
+            - guide <br>
+            - destiny <br>
+        <img src="img/sources/ojoref.jpg" alt="Eye reference" style="max-width:100%;margin-top:1em;">
         </p>`
     }
 };
