@@ -80,6 +80,7 @@ const temas = {
     juegos: {
         title: "Juegos",
         html: `<p>
+            
             ¿Consideras que alguna experiencia te ha impactado lo suficiente como para que siempre tengas en cuenta los escenerios a los que te dejaste adentrar?
             <br><br>
             Creo que este tipo de conexión es considerablemente más complicada de conseguir, esto debido al cambio de formato que ha sufrido el entretenimiento,
@@ -89,6 +90,19 @@ const temas = {
             evolución del entretenimiento, saltandose la norma de lo inmediato e incluso dandole un descanso a esa constante sensación de necesitar que todo avance
             rápidamente.
             <br><br>
+            Para fines narrativos, por favor te invito a escuchar el audio adjunto.
+            <br><br>
+            Minecraft
+            <br><br>
+            <media-theme-tailwind-audio
+                style="--media-primary-color: #811818; --media-secondary-color: #000000; --media-accent-color: #930101; width:100%;max-width:400px;display:block;margin:0 auto 1.2em auto;">
+                <audio
+                    slot="media"
+                    src="audio/minecraft.mp3"
+                    playsinline
+                    crossorigin="anonymous"
+                ></audio>
+            </media-theme-tailwind-audio>
             Te invito a interactuar y leer un poco sobre estos tres titulos detallados a continuación.
         </p>
         <div class="juegos-subtemas-container">

@@ -3,17 +3,7 @@ window.juegosSubtemas = {
     minecraft: `
         <h3>Minecraft</h3>
         <p>
-            Para fines narrativos, por favor te invito a escuchar el audio adjunto.
-            <br><br>
-            <media-theme-tailwind-audio
-                style="--media-primary-color: #811818; --media-secondary-color: #000000; --media-accent-color: #930101; width:100%;max-width:400px;display:block;margin:0 auto 1.2em auto;">
-                <audio
-                    slot="media"
-                    src="audio/minecraft.mp3"
-                    playsinline
-                    crossorigin="anonymous"
-                ></audio>
-            </media-theme-tailwind-audio>
+            
             <strong>Minecraft</strong> como concepto es complicado. Definirlo es caer en un sin fin de categorías e ideas. En este apartado será
             un tanto reflexivo y entorno a mi experiencia propia.
             <br><br>
@@ -77,7 +67,7 @@ window.juegosSubtemas = {
             </ul>
             
             <img src="img/sources/sigues-siendo-tu.jpg" alt="Sans dialogo" style="max-width:100%;margin-top:1em;">
-            
+            <br><br>
             Es brutal como al final del juego te terminas dando cuenta que sigues siendo la misma persona en el fondo.
             <br><br>
             Los tres finales son magistrales y todos se conectan entre si y si tu eres de las personas
@@ -88,21 +78,35 @@ window.juegosSubtemas = {
     blasphemous: `
         <h3>Blasphemous</h3>
         <p>
-            <strong>Blasphemous</strong> es una experiencia que va mucho más allá de la dificultad y el reto. Es un viaje a través de un mundo que parece estar hecho de dolor, fe y redención, donde cada paso que das está marcado por el peso de la penitencia y la culpa.
+            <strong>Blasphemous</strong> es una experiencia que va mucho más allá de la dificultad y el reto. Es un viaje a 
+            través de un mundo que parece estar hecho de dolor, fe y redención, donde cada paso que das está marcado por el peso 
+            de la penitencia y la culpa.
             <br><br>
-            Recuerdo la primera vez que me adentré en Cvstodia. La atmósfera era tan densa que parecía que el aire mismo pesaba. El arte, inspirado en el folclore español y la imaginería religiosa, logra transmitir una sensación de inquietud y belleza a partes iguales. Cada escenario está cargado de simbolismo, cada enemigo parece una manifestación de algún pecado o sufrimiento.
+            Recuerdo la primera vez que me adentré en Cvstodia. La atmósfera era tan densa que parecía que el aire mismo pesaba. 
+            El arte, inspirado en el folclore español y la imaginería religiosa, logra transmitir una sensación de inquietud y 
+            belleza a partes iguales. Cada escenario está cargado de simbolismo, cada enemigo parece una manifestación de algún 
+            pecado o sufrimiento.
             <br><br>
-            Lo que más me impactó fue la manera en que el juego te obliga a enfrentarte a tus propios límites. No hay concesiones: cada error se paga, cada victoria se siente como una pequeña redención. La música acompaña perfectamente ese ambiente, con melodías que parecen rezos y lamentos, reforzando la sensación de estar en un lugar sagrado y maldito al mismo tiempo.
+            Lo que más me impactó fue la manera en que el juego te obliga a enfrentarte a tus propios límites. No hay concesiones: 
+            cada error se paga, cada victoria se siente como una pequeña redención. La música acompaña perfectamente ese ambiente, 
+            con melodías que parecen rezos y lamentos, reforzando la sensación de estar en un lugar sagrado y maldito al mismo tiempo.
             <br><br>
-            <img src="img/sources/blasphemous-art.jpg" alt="Blasphemous arte" style="max-width:100%; margin-top:1em; display:block; margin-left:auto; margin-right:auto;">
+
+            <img src="img/sources/angel-blasphemous.jpg" alt="Blasphemous arte" style="max-width:100%; margin-top:1em; display:block; margin-left:auto; margin-right:auto;">
             <br>
-            El protagonista, el Penitente, es casi un reflejo del propio jugador: alguien que avanza por pura voluntad, soportando el peso de sus propias culpas y buscando algún tipo de significado en medio del sufrimiento. No hay diálogos extensos ni explicaciones directas, pero cada objeto, cada estatua y cada rincón cuenta una historia que se siente personal y universal a la vez.
+            El protagonista, el Penitente, es casi un reflejo del propio jugador: alguien que avanza por pura voluntad, 
+            soportando el peso de sus propias culpas y buscando algún tipo de significado en medio del sufrimiento. No hay diálogos 
+            extensos ni explicaciones directas, pero cada objeto, cada estatua y cada rincón cuenta una historia que se siente personal 
+            y universal a la vez.
             <br><br>
-            Blasphemous no es solo un juego difícil; es una obra que te invita a reflexionar sobre la fe, la culpa y la redención. Es un recordatorio de que, a veces, el camino más oscuro puede llevarte a descubrir algo valioso sobre ti mismo.
+            Blasphemous no es solo un juego difícil; es una obra que te invita a reflexionar sobre la fe, la culpa y la redención. 
+            Es un recordatorio de que, a veces, el camino más oscuro puede llevarte a descubrir algo valioso sobre ti mismo.
             <br>
-            <img src="img/sources/blasphemous-boss.jpg" alt="Blasphemous boss" style="max-width:100%; margin-top:1em; display:block; margin-left:auto; margin-right:auto;">
+            <img src="img/sources/boss-blasphemous.jpg" alt="Blasphemous boss" style="max-width:100%; margin-top:1em; display:block; margin-left:auto; margin-right:auto;">
             <br>
-            Si alguna vez te has sentido atraído por los mundos que mezclan lo sagrado y lo profano, por las historias que no temen mostrar el dolor y la belleza en la misma escena, Blasphemous es una experiencia que merece ser vivida. No solo por su jugabilidad desafiante, sino por la manera en que logra dejar una huella en quien se atreve a recorrer sus caminos.
+            Si alguna vez te has sentido atraído por los mundos que mezclan lo sagrado y lo profano, por las historias que no temen 
+            mostrar el dolor y la belleza en la misma escena, Blasphemous es una experiencia que merece ser vivida. No solo por su 
+            jugabilidad desafiante, sino por la manera en que logra dejar una huella en quien se atreve a recorrer sus caminos.
         </p>
     `
 };
