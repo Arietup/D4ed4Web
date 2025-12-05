@@ -107,7 +107,35 @@ const temas = {
             In this section, I'd like to focus mainly on visual art, such as painting and photography. I understand there are many forms of expression, including less conventional ones like digital art, pixel art, generative art, among others, but at least here I'll try to focus on the more traditional forms and maybe a few that aren't so traditional. I won't add art forms like cinema, books, or music, as I believe these deserve their own exclusive space, though it's important to at least mention them here.
             <br><br>
             Going into detail, this section could become somewhat extensive, however, I'll try to keep it as organized, pleasant, and enjoyable as possible, presenting what personally captures my attention and seems most interesting. I hope you enjoy the different subtopics here and can find at least something that catches your attention, even if just a little.
-        </p>
+            <br><br>
+            For narrative purposes, please listen to the attached audio.
+          
+            <br><br>
+            
+            <div style="display: flex; flex-direction: column; gap: 1.2em; align-items: center; width:100%;max-width:400px;margin:0 auto 1.2em auto;">
+                <div style="width:100%;">
+                    <span style="display:block;font-size:0.97em;color:#ccc;margin-bottom:0.3em;text-align:center;">Leere im Inneren</span>
+                    <media-theme-tailwind-audio
+                        style="--media-primary-color: #222; --media-secondary-color: #000; --media-accent-color: #555; width:100%;display:block;">
+                        <audio slot="media" playsinline crossorigin="anonymous" controls>
+                            <source src="audio/Leere-im-Inneren.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </media-theme-tailwind-audio>
+                </div>
+                <div style="width:100%;">
+                    <span style="display:block;font-size:0.97em;color:#ccc;margin-bottom:0.3em;text-align:center;">The Last Breath - Dying Forest</span>
+                    <media-theme-tailwind-audio
+                        style="--media-primary-color: #222; --media-secondary-color: #000; --media-accent-color: #555; width:100%;display:block;">
+                        <audio slot="media" playsinline crossorigin="anonymous" controls>
+                            <source src="audio/TheLastBreath-DyingForest.mp3" type="audio/mp3">
+                            Your browser does not support the audio element.
+                        </audio>
+                    </media-theme-tailwind-audio>
+                </div>
+               
+            </div>
+            </p>
         <div class="arte-subtemas-container">
             <div class="arte-subtema-card" data-subtema="pintura">
                 <span class="arte-subtema-label">?</span>

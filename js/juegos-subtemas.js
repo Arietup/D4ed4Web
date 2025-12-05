@@ -44,10 +44,9 @@ window.juegosSubtemas = {
             <br><br>
             Here are some of what I consider the best tracks in the game:<br>
            <ul>
-                <li><a href="https://www.youtube.com/watch?v=VJw4VQUu-4c" target="_blank">Undertale - Main Theme</a></li>
-                <li><a href="https://www.youtube.com/watch?v=QjXpXQK7Wg8" target="_blank">Hopes and Dreams</a></li>
-                <li><a href="https://www.youtube.com/watch?v=I-IiC2YhB9o" target="_blank">His Theme</a></li>
-                <li><a href="https://www.youtube.com/watch?v=kPSXAVs2yqg" target="_blank">Battle Against a True Hero</a></li>
+                <li><a href="https://www.youtube.com/watch?v=1HIKNbnV8nw" target="_blank">Undertale - Main Theme</a></li>
+                <li><a href="https://www.youtube.com/watch?v=DVUh7caufKU" target="_blank">Waterfall/a></li>
+                <li><a href="https://www.youtube.com/watch?v=KtC-pl9P3kE" target="_blank">It's Raining Somewhere Else</a></li>
             </ul>
             <img src="img/sources/sigues-siendo-tu.jpg" alt="Sans dialogue" style="max-width:100%;margin-top:1em;">
             <br><br>
