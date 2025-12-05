@@ -4,132 +4,107 @@
     const overlay = document.getElementById("ojo-overlay");
 
     const frases = [
-        ["Hola, supongo que la curiosidad te ha traido hasta aquí", "Sientete libre comentarme tu nombre o lo que desees"],
-        ["Es curioso", "Te puedo ver pero eres irreconocible", "¿Tan obligado te sentiste a cambiar?"],
-        ["Es imposible saber quien eresexactamente", "Sientete bienvedio de comentar algo, así sea tu nomrbe"],
-        ["Tu mirada, no la reconozco", "Sin que digas nada, te escucho gritar"],
-        ["¿Puedes recapitular algo?" , "Estoy seguro que te sigue dando igual"]
+        ["Hello, I suppose curiosity brought you here.", "Feel free to tell me your name or anything you wish."],
+        ["It's curious.", "I can see you but you are unrecognizable.", "Did you feel so forced to change?"],
+        ["It's impossible to know exactly who you are.", "Feel free to comment something, even if it's just your name."],
+        ["Your gaze, I don't recognize it.", "Without saying anything, I hear you scream."],
+        ["Can you recall something?", "I'm sure you still don't care."]
     ];
 
     const codigos = {
-        "luz": [
-            "Nietzsche: \"Cuanto más busca elevarse a la altura y a la luz, con más fuerza luchan sus raíces hacia la tierra, hacia abajo, hacia lo oscuro.\" (De Así habló Zaratustra).",
-            "Rilke: \"Siente cómo tu respiración crea más espacio a tu alrededor. Deja que esta oscuridad sea un campanario y tú la campana.\" (De Cartas a un joven poeta, sobre encontrar luz en la oscuridad).",
-            "Kafka: \"En una luz que es feroz y fuerte uno puede ver el mundo disolverse.\" (De reflexiones en sus diarios).",
-            "Camus: \"La verdad, como la luz, ciega. La falsedad, por el contrario, es un crepúsculo precioso que realza cada objeto.\" (De El mito de Sísifo).",
-            "Borges: \"Iba sin fin hacia la luz... La vida tenía un cuerpo, la esperanza tendía sus velas.\" (De poemas como El otro, el mismo).",
-            "Benedetti: \"Llenes con tu luz.\" (De poemas románticos como La tregua).",
-            "Sartre: \"O luz! Este es el grito de todos los personajes del drama antiguo frente a su destino.\" (De reflexiones existenciales en El ser y la nada).",
-            "Kierkegaard: \"La luz de la eternidad brilla sobre la tumba.\" (De Tres discursos en ocasiones imaginadas).",
-            "Hesse: \"No hay nada más difícil que hablar de ciertas cosas cuya existencia no es demostrable ni probable.\" (De El juego de los abalorios, sobre luz en lo invisible).",
-            "Pessoa: \"Escrituras de luz asaltan la oscuridad, más prodigiosas que meteoros.\" (De Libro del desasosiego).",
-            "Dostoevsky: \"O luz! Este es el grito de todos los personajes del drama antiguo frente a su destino.\" (De reflexiones en Los hermanos Karamazov)."
+        "light": [
+            "Nietzsche: 'The higher we soar, the smaller we appear to those who cannot fly.' (Thus Spoke Zarathustra)",
+            "Rilke: 'Let your breath create more space around you. Let this darkness be a bell tower and you the bell.' (Letters to a Young Poet)",
+            "Kafka: 'In a light that is fierce and strong, one can see the world dissolve.' (Diaries)",
+            "Camus: 'Truth, like light, blinds. Falsehood, on the contrary, is a beautiful twilight that enhances every object.' (The Myth of Sisyphus)",
+            "Borges: 'Endlessly I went toward the light... Life had a body, hope set its sails.' (Poems)",
+            "Benedetti: 'May you fill with your light.' (The Truce)",
+            "Sartre: 'O light! This is the cry of all the characters in ancient drama before their destiny.' (Being and Nothingness)",
+            "Kierkegaard: 'The light of eternity shines upon the grave.' (Three Discourses)",
+            "Hesse: 'There is nothing more difficult than to speak of certain things whose existence cannot be proven or probable.' (The Glass Bead Game)",
+            "Pessoa: 'Writings of light assault the darkness, more prodigious than meteors.' (The Book of Disquiet)",
+            "Dostoevsky: 'O light! This is the cry of all the characters in ancient drama before their destiny.' (The Brothers Karamazov)"
         ],
-        "oscuro": [
-            "Nietzsche: \"Quien con monstruos lucha, cuide de convertirse a su vez en monstruo. Cuando miras largo tiempo a un abismo, también el abismo mira dentro de ti.\" (De Más allá del bien y del mal).",
-            "Rilke: \"A ti, oscuridad de la que vengo, te amo más que a la llama que limita el mundo.\" (De Libro de horas).",
-            "Kafka: \"En tu lucha contra el resto del mundo te aconsejo que te pongas del lado del resto del mundo.\" (Refiriéndose a un oscuro sentimiento de derrota).",
-            "Camus: \"Somos la luz al final del túnel, somos la estrella en el espacio.\" (De ensayos sobre el absurdo y la oscuridad).",
-            "Borges: \"En este mundo oscuro y ancho.\" (De reflexiones sobre la ceguera en La ceguera).",
-            "Benedetti: \"Es evidente que Dios me concedió un destino oscuro.\" (De poemas como Inventario).",
-            "Sartre: \"Yo desconfío de lo incomunicable; es la fuente de toda violencia.\" (De ¿Qué es la literatura?, sobre lo oscuro en lo inefable).",
-            "Kierkegaard: \"El tirano muere y su gobierno termina, el mártir muere y el suyo comienza.\" (Sobre oscuridad en la opresión).",
-            "Hesse: \"El aire de hombres solitarios lo rodeaba ahora, una atmósfera quieta en la que el mundo se deslizaba lejos.\" (De El lobo estepario).",
-            "Pessoa: \"La noche no debería ser tan oscura.\" (De reflexiones en Libro del desasosiego).",
-            "Dostoevsky: \"El universo es un vacío cruel e indiferente.\" (De Notas del subsuelo)."
+        "dark": [
+            "Nietzsche: 'Whoever fights monsters should see to it that he does not become a monster. When you gaze long into the abyss, the abyss also gazes into you.' (Beyond Good and Evil)",
+            "Rilke: 'To you, darkness from which I come, I love you more than the flame that limits the world.' (Book of Hours)",
+            "Kafka: 'In your struggle against the rest of the world, I advise you to side with the rest of the world.' (Diaries)",
+            "Camus: 'We are the light at the end of the tunnel, we are the star in space.' (Essays)",
+            "Borges: 'In this dark and wide world.' (Blindness)",
+            "Benedetti: 'It is evident that God granted me a dark destiny.' (Inventory)",
+            "Sartre: 'I distrust the incommunicable; it is the source of all violence.' (What is Literature?)",
+            "Kierkegaard: 'The tyrant dies and his rule ends, the martyr dies and his rule begins.' (Diaries)",
+            "Hesse: 'The air of lonely men surrounded him now, a quiet atmosphere in which the world slipped away.' (Steppenwolf)",
+            "Pessoa: 'The night should not be so dark.' (The Book of Disquiet)",
+            "Dostoevsky: 'The universe is a cruel and indifferent void.' (Notes from Underground)"
         ],
-        "secreto": [
-            "Nietzsche: \"El secreto para cosechar los mayores frutos y el mayor goce de la vida es vivir peligrosamente.\" (De La gaya ciencia).",
-            "Rilke: \"Ojalá que el ser humano perciba este secreto que llena el mundo hasta en lo más pequeño.\" (De Cartas a un joven poeta).",
-            "Kafka: \"No dejes que el mal te confunda y creas que puedes tener secretos para él.\" (De Aforismos).",
-            "Camus: \"El secreto de mi universo es sólo imaginar a Dios sin la inmortalidad del hombre.\" (De El mito de Sísifo).",
-            "Borges: \"Dios operaba para él un milagro secreto.\" (De El milagro secreto).",
-            "Benedetti: \"Algo de secreto en la memoria.\" (De poemas como La tregua).",
-            "Sartre: \"No juzgues a los dioses, joven, tienen secretos dolorosos.\" (De reflexiones en obras).",
-            "Kierkegaard: \"El secreto doloroso de dioses y reyes; es que los hombres son libres.\" (De diarios).",
-            "Hesse: \"Para personas de mente ligera, las cosas inexistentes pueden representarse más fácilmente.\" (De El juego de los abalorios).",
-            "Pessoa: \"Aquí está el secreto más profundo que nadie sabe.\" (De Libro del desasosiego).",
-            "Dostoevsky: \"El secreto del hombre reside en su capacidad de sufrimiento.\" (De Los hermanos Karamazov)."
+        "secret": [
+            "Nietzsche: 'The secret for harvesting the greatest fruitfulness and the greatest enjoyment from existence is to live dangerously.' (The Gay Science)",
+            "Rilke: 'May humans perceive this secret that fills the world even in the smallest things.' (Letters to a Young Poet)",
+            "Kafka: 'Do not let evil confuse you and think you can have secrets from it.' (Aphorisms)",
+            "Camus: 'The secret of my universe is only to imagine God without the immortality of man.' (The Myth of Sisyphus)",
+            "Borges: 'God worked for him a secret miracle.' (The Secret Miracle)",
+            "Benedetti: 'Something secret in memory.' (The Truce)",
+            "Sartre: 'Do not judge the gods, young man, they have painful secrets.' (Reflections)",
+            "Kierkegaard: 'The painful secret of gods and kings; is that men are free.' (Diaries)",
+            "Hesse: 'For people of light mind, nonexistent things can be represented more easily.' (The Glass Bead Game)",
+            "Pessoa: 'Here is the deepest secret nobody knows.' (The Book of Disquiet)",
+            "Dostoevsky: 'The secret of man lies in his capacity for suffering.' (The Brothers Karamazov)"
         ],
-        "soy yo": [
-            "Nietzsche: \"Cuerpo soy yo enteramente, y nada más; y alma es solo el nombre de algo en el cuerpo.\" (De Así habló Zaratustra).",
-            "Rilke: \"Estoy demasiado solo en el mundo, y aún así no lo suficientemente solo.\" (De Libro de horas).",
-            "Kafka: \"Soy libre y por eso estoy perdido.\" (De Cartas a Felice).",
-            "Camus: \"No hay amor eterno si no es contrariado.\" (Relacionado al yo en El mito de Sísifo).",
-            "Borges: \"No estoy seguro de que yo exista, en realidad. Soy todos los autores que he leído.\" (De ensayos).",
-            "Benedetti: \"Yo quisiera ser yo, pero un poco mejor.\" (De La tregua).",
-            "Sartre: \"Soy porque pienso... y no puedo dejar de pensar.\" (De La náusea).",
-            "Kierkegaard: \"La vida solo puede entenderse hacia atrás; pero debe vivirse hacia adelante.\" (Sobre el yo en reflexión).",
-            "Hesse: \"He perdido mi Yo mil veces y por días enteros he morado en el no-ser.\" (De Siddhartha).",
-            "Pessoa: \"No soy nadie, nadie. Soy un personaje en una novela que queda por escribir.\" (De Libro del desasosiego).",
-            "Dostoevsky: \"El hombre es un misterio. Debo resolverlo.\" (De Los hermanos Karamazov, sobre el yo)."
+        "empty": [
+            "Nietzsche: 'When you gaze long into an abyss, the abyss also gazes into you.' (Beyond Good and Evil)",
+            "Rilke: 'That is why it is so important to be alone and attentive when you are sad; because the apparently perplexed and empty moment of events.' (Letters to a Young Poet)",
+            "Kafka: 'The bachelor apparently resigns by his own will and in full life to an empty space, ever smaller.' (Metamorphosis and Diaries)",
+            "Camus: 'The absurd is born when the human being seeks meaning in an indifferent universe.' (The Myth of Sisyphus)",
+            "Borges: 'How many places have become vain and meaningless, like lights in the day.' (Absence)",
+            "Benedetti: 'What I need from you reflects a feeling of emptiness due to the absence of your love.' (What I Need from You)",
+            "Sartre: 'I am the emptiness that opens in my soul when I look ahead.' (Nausea)",
+            "Kierkegaard: 'If beneath everything lay an insatiable emptiness, what would life be but despair?' (Either/Or)",
+            "Hesse: 'Now my past is nothing but a huge emptiness.' (Steppenwolf)",
+            "Pessoa: 'I am the periphery of a nonexistent city.' (The Book of Disquiet)",
+            "Dostoevsky: 'The universe is a cruel and indifferent void.' (Notes from Underground)"
         ],
-        "perdido": [
-            "Nietzsche: \"Debemos considerar perdidos todos los días en los que no hemos bailado al menos una vez.\" (De Humano, demasiado humano).",
-            "Rilke: \"No crea usted que aquel gran amor que de niño le fue entregado, se haya perdido.\" (De Cartas a un joven poeta).",
-            "Kafka: \"Soy libre y por eso estoy perdido.\" (De Cartas a Felice).",
-            "Camus: \"La pérdida de personas que ilustran un ideal como la libertad.\" (De ensayos políticos).",
-            "Borges: \"Sé que he perdido tantas cosas que no podría contarlas y que esas perdiciones, ahora, son lo que es mío.\" (De Lo perdido).",
-            "Benedetti: \"Soy un caso perdido.\" (De poemas como Inventario).",
-            "Sartre: \"Cada cosa existente nace sin razón, se prolonga por debilidad y muere por casualidad.\" (De El ser y la nada).",
-            "Kierkegaard: \"El yo que no era consciente de sí mismo es ipso facto lo accidental.\" (De Tres discursos).",
-            "Hesse: \"Se perdió su Yo mil veces y por días enteros habitó en el no-ser.\" (De Siddhartha).",
-            "Pessoa: \"Soy libre y por eso estoy perdido.\" (Similar a Kafka, en Libro del desasosiego).",
-            "Dostoevsky: \"El hombre solo aprende en su propia carne.\" (Sobre pérdida en Crimen y castigo)."
+        "lost": [
+            "Nietzsche: 'We should consider every day lost on which we have not danced at least once.' (Human, All Too Human)",
+            "Rilke: 'Do not believe that the great love given to you as a child has been lost.' (Letters to a Young Poet)",
+            "Kafka: 'I am free and that is why I am lost.' (Letters to Felice)",
+            "Camus: 'The loss of people who illustrate an ideal like freedom.' (Political Essays)",
+            "Borges: 'I know I have lost so many things that I could not count them, and those losses, now, are what is mine.' (Lost)",
+            "Benedetti: 'I am a lost case.' (Inventory)",
+            "Sartre: 'Every existing thing is born without reason, prolongs itself out of weakness and dies by chance.' (Being and Nothingness)",
+            "Kierkegaard: 'The self that was not aware of itself is ipso facto accidental.' (Three Discourses)",
+            "Hesse: 'He lost his self a thousand times and for days on end dwelled in non-being.' (Siddhartha)",
+            "Pessoa: 'I am free and that is why I am lost.' (The Book of Disquiet)",
+            "Dostoevsky: 'Man only learns in his own flesh.' (Crime and Punishment)"
         ],
-        "perdida": [
-            "Nietzsche: \"Todo lo que amas probablemente se perderá, pero al final, el amor volverá de otra manera.\" (De La gaya ciencia).",
-            "Rilke: \"Sí, todo arte es el resultado de haber estado en peligro, de haber vivido una experiencia hasta el final.\" (Relacionado a la pérdida en Cartas a un joven poeta).",
-            "Kafka: \"Soy libre y es por eso que estoy perdido.\" (Extensible a 'perdida').",
-            "Camus: \"La pérdida de personas que ilustran un ideal como la libertad.\" (Similar a 'perdido').",
-            "Borges: \"Solo es nuestro lo que perdimos.\" (De Otras inquisiciones).",
-            "Benedetti: \"Lo perdido es también un par o dos de labios que probaron el sabor de los míos.\" (De poemas románticos).",
-            "Sartre: \"La vida es un viaje experimental emprendido involuntariamente.\" (Sobre pérdida existencial).",
-            "Kierkegaard: \"La vida es no un problema a resolver, sino una realidad a experimentar.\" (Sobre pérdida en la experiencia).",
-            "Hesse: \"Mi resolución de morir no fue un capricho de una hora.\" (De El lobo estepario).",
-            "Pessoa: \"Todo me interesa, pero nada me retiene.\" (Sobre pérdida de interés).",
-            "Dostoevsky: \"Sin esperanza, es cesar de vivir.\" (Sobre pérdida de esperanza)."
+        "guide": [
+            "Nietzsche: 'He who needs to be guided by a shepherd can only have the intelligence of a sheep.' (The Antichrist)",
+            "Rilke: 'God is the inner voice that guides us where we must go.' (Book of Hours)",
+            "Kafka: 'A book must be the axe for the frozen sea within us.' (Diaries)",
+            "Camus: 'Do not walk in front of me, I may not follow. Do not walk behind me, I may not lead.' (Reflections on Friendship)",
+            "Borges: 'History is just another form of fiction.' (Narrative Guide)",
+            "Benedetti: 'If I love you, it's because you are my love, my accomplice, and everything.' (Guide in Love)",
+            "Sartre: 'Man is what he makes of what was made of him.' (Self-Guidance)",
+            "Kierkegaard: 'Life must be lived forward.' (Existential Guide)",
+            "Hesse: 'The purpose that guided him was not impossible, though supernatural.' (The Dream)",
+            "Pessoa: 'Everything interests me, but nothing holds me.' (Lack of Guide)",
+            "Dostoevsky: 'Man is the architect of his own destiny.' (Self-Guidance)"
         ],
-        "guia": [
-            "Nietzsche: \"Quien necesite ser guiado por un pastor, solo puede tener la inteligencia de un borrego.\" (De El anticristo).",
-            "Rilke: \"Dios es la voz interna que nos guía hacia donde debemos ir.\" (De Libro de horas).",
-            "Kafka: \"Un libro debe ser el hacha que rompa el mar helado que llevamos dentro.\" (Como guía interior).",
-            "Camus: \"No camines delante de mí, puede que no te siga. No camines detrás de mí, puede que no te guíe.\" (De reflexiones sobre amistad).",
-            "Borges: \"La historia es una forma más de ficción.\" (Como guía narrativa).",
-            "Benedetti: \"Si te quiero es porque sos mi amor, mi cómplice y todo.\" (Guía en el amor).",
-            "Sartre: \"El hombre es lo que hace con lo que hicieron de él.\" (Sobre guía propia).",
-            "Kierkegaard: \"La vida debe vivirse hacia adelante.\" (Como guía existencial).",
-            "Hesse: \"El propósito que lo guiaba no era imposible, aunque sobrenatural.\" (De El sueño).",
-            "Pessoa: \"Todo interés me, pero nada me retiene.\" (Sobre falta de guía).",
-            "Dostoevsky: \"El hombre es el arquitecto de su propio destino.\" (Sobre guía propia)."
-        ],
-        "destino": [
-            "Nietzsche: \"Ya sé cuál es mi destino. Un día mi nombre estará ligado al recuerdo de algo tremendo.\" (De Ecce Homo).",
-            "Rilke: \"Lo que llamamos destino no nos llega del exterior, sino que emerge de nosotros.\" (De Cartas a un joven poeta).",
-            "Kafka: \"Los besos por escrito no llegan a su destino, se los beben por el camino los fantasmas.\" (De Cartas a Milena).",
-            "Camus: \"No hay destino que no se supere por el desprecio.\" (De El mito de Sísifo).",
-            "Borges: \"Cualquier destino, por largo y complicado que sea, consta en realidad de un solo momento.\" (De El jardín de senderos que se bifurcan).",
-            "Benedetti: \"Te quiero pero no deseo luchar contra el destino.\" (De poemas románticos).",
-            "Sartre: \"La libertad es lo que haces con lo que te han hecho.\" (Sobre destino auto-creado).",
-            "Kierkegaard: \"El destino, entonces, es la nada de la ansiedad.\" (De diarios).",
-            "Hesse: \"Si lo que importa en la existencia de una persona es aceptar lo inevitable conscientemente.\" (De reflexiones en Demian).",
-            "Pessoa: \"El destino es como un vasto tapiz maravilloso en el que cada hilo es guiado por una mano tierna.\" (De Libro del desasosiego).",
-            "Dostoevsky: \"No hay destino que no pueda ser superado por el desprecio.\" (Similar a Camus, en Notas del subsuelo)."
-        ],
-        "vacio": [
-            "Nietzsche: \"Cuando miras largo tiempo a un abismo, el abismo también mira dentro de ti.\" (De Más allá del bien y del mal).",
-            "Rilke: \"Por eso es tan importante estar solo y atento cuando se está triste; porque el instante aparentemente perplejo y vacío de acontecimientos.\" (De Cartas a un joven poeta).",
-            "Kafka: \"El soltero se resigna aparentemente por su propia voluntad y en plena vida a un espacio vacío, cada vez más pequeño.\" (De La metamorfosis y diarios).",
-            "Camus: \"El absurdo nace cuando el ser humano busca sentido en un universo indiferente.\" (De El mito de Sísifo, sobre el vacío existencial).",
-            "Borges: \"Cuántos lugares se han tornado vanos y sin sentido, iguales a luces en el día.\" (De Ausencia).",
-            "Benedetti: \"Lo que necesito de ti refleja una sensación de vacío por la ausencia de su amor.\" (De poemas como Lo que necesito de ti).",
-            "Sartre: \"Soy el vacío que se abre en mi alma cuando miro hacia adelante.\" (De La náusea).",
-            "Kierkegaard: \"Si debajo de todo yaciera un vacío insaciable, ¿qué sería la vida sino desesperación?\" (De O lo uno o lo otro).",
-            "Hesse: \"Ahora mi pasado no es más que un enorme vacío.\" (De El lobo estepario).",
-            "Pessoa: \"Soy la periferia de una ciudad inexistente.\" (De Libro del desasosiego, sobre vacío).",
-            "Dostoevsky: \"El universo es un vacío cruel e indiferente.\" (De Notas del subsuelo)."
+        "destiny": [
+            "Nietzsche: 'I know my fate. One day my name will be associated with something tremendous.' (Ecce Homo)",
+            "Rilke: 'What we call fate does not come to us from outside, but emerges from within us.' (Letters to a Young Poet)",
+            "Kafka: 'Written kisses do not reach their destination, the ghosts drink them along the way.' (Letters to Milena)",
+            "Camus: 'There is no fate that cannot be surmounted by scorn.' (The Myth of Sisyphus)",
+            "Borges: 'Any fate, no matter how long and complicated, is actually just a single moment.' (The Garden of Forking Paths)",
+            "Benedetti: 'I love you but I do not wish to fight against fate.' (Poems)",
+            "Sartre: 'Freedom is what you do with what's been done to you.' (Self-Created Destiny)",
+            "Kierkegaard: 'Fate, then, is the nothingness of anxiety.' (Diaries)",
+            "Hesse: 'What matters in a person's existence is to consciously accept the inevitable.' (Demian)",
+            "Pessoa: 'Destiny is like a vast, wonderful tapestry in which every thread is guided by a tender hand.' (The Book of Disquiet)",
+            "Dostoevsky: 'There is no fate that cannot be overcome by scorn.' (Notes from Underground)"
         ]
     };
+    
 
     let modoOjoActivo = false;
     let textoDiv = null;
@@ -146,24 +121,24 @@
         overlay.style.opacity = "1";
         document.body.style.overflow = "hidden";
         requestAnimationFrame(() => {
-            mostrarTextoOjo(["Hola"].concat(frases[Math.floor(Math.random() * frases.length)]));
+            mostrarTextoOjo(["Hello"].concat(frases[Math.floor(Math.random() * frases.length)]));
         });
     });
 
     function desactivarModoOjo(despedir = false) {
         if (despedir) {
-            // Si ya hay un mensaje de despedida, no lo repitas
-            if (textoDiv && textoDiv.textContent.trim() === "Hasta luego.") {
+            // If there's already a goodbye message, don't repeat it
+            if (textoDiv && textoDiv.textContent.trim() === "Goodbye.") {
                 finalizarCierre();
                 return;
             }
             if (textoDiv) textoDiv.remove();
             if (inputDiv) inputDiv.remove();
             if (closeBtn) closeBtn.remove();
-            // Mostrar mensaje de despedida antes de cerrar
+            // Show goodbye message before closing
             textoDiv = document.createElement("div");
             textoDiv.id = "ojo-texto-undertale";
-            textoDiv.textContent = "Hasta luego.";
+            textoDiv.textContent = "Goodbye.";
             document.body.appendChild(textoDiv);
             setTimeout(finalizarCierre, 1200);
         } else {
@@ -191,7 +166,7 @@
         closeBtn = document.createElement("button");
         closeBtn.id = "ojo-close-undertale";
         closeBtn.innerHTML = "&times;";
-        closeBtn.title = "Cerrar";
+        closeBtn.title = "Close";
         closeBtn.onclick = function() {
             desactivarModoOjo(true);
         };
@@ -223,8 +198,8 @@
         inputDiv = document.createElement("div");
         inputDiv.id = "ojo-input-undertale";
         inputDiv.innerHTML = `
-            <input type="text" placeholder="Escribe tu respuesta..." autofocus />
-            <button>Enviar</button>
+            <input type="text" placeholder="Type your answer..." autofocus />
+            <button>Send</button>
         `;
         document.body.appendChild(inputDiv);
 
@@ -251,19 +226,19 @@
             } else {
                 mostrarTextoOjo([codigos[clave]]);
             }
-        } else if (clave === "adios" || clave === "salir" || clave === "cerrar") {
-            mostrarTextoOjo(["Hasta luego."], false);
+        } else if (clave === "goodbye" || clave === "exit" || clave === "close") {
+            mostrarTextoOjo(["Goodbye."], false);
             setTimeout(() => desactivarModoOjo(false), 1200);
             return;
         } else {
-            if (clave.includes("quien") || clave.includes("soy")) {
-                mostrarTextoOjo(["Minimo deberías ser consciente de tu nombre."]);
+            if (clave.includes("who") || clave.includes("am")) {
+                mostrarTextoOjo(["At least you should be aware of your name."]);
             } else if (clave.length < 3) {
-                mostrarTextoOjo(["¿Eso es todo?"]);
-            } else if (clave.match(/hola|buenas|saludos/)) {
-                mostrarTextoOjo(["Acabo de saludarte, ¿No tienes otra respuesta?."]);
+                mostrarTextoOjo(["Is that all?"]);
+            } else if (clave.match(/hello|hi|greetings/)) {
+                mostrarTextoOjo(["I just greeted you, don't you have another answer?"]);
             } else {
-                mostrarTextoOjo(["Interesante. veo que no te estás esforzando mucho.","sigue en búsqueda de alguna respuesta que me puedas brindar", "No me iré"]);
+                mostrarTextoOjo(["Interesting. I see you're not trying very hard.","Keep searching for an answer you can give me.", "I won't leave."]);
             }
         }
     }

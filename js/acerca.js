@@ -11,7 +11,7 @@ const temas = {
             Explore the themes from the menu on the left and enjoy your visit!
             <br>
         </p>
-        <img src="img/sources/prayer.jpg" alt="Welcome image" style="max-width:100%;margin-top:1em;">
+        <img src="img/sources/prayer.jpg" alt="cave" style="max-width:80%; margin-top:1em; display:block; margin-left:auto; margin-right:auto;>
         <p>
             Yes, the image changed. I suppose you did too.<br>
             There's the idea that I'm really talking to you, and if so—are you really you? Either way, I don't want to know.<br><br>
@@ -226,7 +226,7 @@ const temas = {
             - lost <br>
             - guide <br>
             - destiny <br>
-        <img src="img/sources/ojoref.jpg" alt="Eye reference" style="max-width:100%;margin-top:1em;">
+        <img src="img/sources/ojoref.jpg" alt="cave" style="max-width:80%; margin-top:1em; display:block; margin-left:auto; margin-right:auto;">
         </p>`
     }
 };
