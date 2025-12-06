@@ -1,0 +1,12 @@
+[
+  {
+    "title": "Album Title Example",
+    "cover": "img/sources/icons/header-icon.jpg",
+    "link": "#"
+  },
+  {
+    "title": "Another Album Example",
+    "cover": "img/sources/icons/header-icon.jpg",
+    "link": "#"
+  }
+]
