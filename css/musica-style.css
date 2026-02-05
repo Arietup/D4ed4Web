@@ -247,69 +247,6 @@ body {
     background: linear-gradient(90deg, #7a1a1a 60%, transparent 100%);
 }
 
-/* --- Playlists de Spotify --- */
-.playlist-list.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.2em;
-    width: 100%;
-}
-.playlist-item {
-    background: rgba(20,20,20,0.92);
-    border: 1.5px dashed #fff;
-    border-radius: 8px;
-    padding: 1.2em 1em 1em 1em;
-    margin-bottom: 1.5em;
-    position: relative;
-    box-shadow: 0 0 0 2px #7a1a1a44 inset;
-    transition: border-color 0.2s, box-shadow 0.2s;
-}
-.playlist-item:hover {
-    border-color: #7a1a1a;
-    box-shadow: 0 0 0 2px #7a1a1a99 inset;
-}
-.playlist-header {
-    display: flex;
-    align-items: center;
-    gap: 0.7em;
-    margin-bottom: 0.5em;
-}
-.playlist-icon {
-    color: #7a1a1a;
-    font-size: 1.3em;
-    filter: blur(0.2px);
-}
-.playlist-title {
-    color: #fff;
-    font-size: 1.05em;
-    letter-spacing: 1px;
-    font-family: inherit;
-    opacity: 0.95;
-}
-.playlist-frame-wrap {
-    background: #111;
-    border: 2px solid #fff;
-    border-radius: 5px;
-    padding: 0.3em;
-    margin-bottom: 0.5em;
-    box-shadow: 0 0 8px #000a inset;
-}
-.playlist-frame-wrap iframe {
-    display: block;
-    width: 100%;
-    border: none;
-    border-radius: 3px;
-    filter: grayscale(0.15) contrast(1.1);
-}
-.playlist-desc {
-    color: #fff;
-    font-size: 0.95em;
-    opacity: 0.7;
-    font-style: italic;
-    letter-spacing: 1px;
-    display: block;
-    margin-top: 0.2em;
-}
 
 /* --- Canciones recomendadas (SoundCloud) --- */
 /* Mejor presentación para canciones recomendadas (SoundCloud) */
@@ -523,25 +460,6 @@ body {
     opacity: 0.7;
 }
 
-/* Scroll interno para la lista de playlists, máximo 4 visibles */
-.playlist-scroll {
-    max-height: 410px; /* Aproximadamente 4 playlists de altura */
-    overflow-y: auto;
-    padding-right: 4px; /* Espacio para scrollbar */
-}
-
-/* Opcional: mejora visual del scrollbar solo en la lista de playlists */
-.playlist-scroll::-webkit-scrollbar {
-    width: 8px;
-    background: #18181b;
-}
-.playlist-scroll::-webkit-scrollbar-thumb {
-    background: #7a1a1a;
-    border-radius: 4px;
-}
-.playlist-scroll::-webkit-scrollbar-thumb:hover {
-    background: #fff;
-}
 
 /* Responsive: tabs dentro del contenido en pantallas pequeñas */
 @media (max-width: 1100px) {
